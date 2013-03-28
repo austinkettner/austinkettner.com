@@ -1,0 +1,16 @@
+---
+title: Blog
+layout: page
+isPage: true
+pageOrder: 3
+---
+
+h2 Blog
+ul.posts
+  each doc in getCollection('posts').toJSON()
+    li.post
+      .date
+        span.month-day
+        span.year
+      .title
+        a(href=doc.url)= doc.title
