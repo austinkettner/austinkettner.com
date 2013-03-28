@@ -1,0 +1,21 @@
+{
+  "name": "austinkettner-website.docpad",
+  "version": "0.1.1",
+  "author": "Austin Kettner",
+  "description": "My Personal website built with Docpad",
+  "homepage": "http://austinkettner.com/",
+  "keywords": [
+      "website",
+      "docpad",
+      "austinkettner",
+      "jade stylus"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/austinkettner/austinkettner.github.com/tree/docpad"
+  },
+  "engines": {
+    "node": "0.10.0",
+    "npm": "1.2.15"
+  }
+}

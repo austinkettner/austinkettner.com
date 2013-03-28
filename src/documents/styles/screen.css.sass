@@ -1,0 +1,290 @@
+//Imports
+@import bourbon/bourbon
+@import modules/grid.css.scss
+@import modules/normalize.css
+@import modules/colors.css.sass
+@import iconic/iconic_stroke.css
+
+//Classes
+.left
+  float: left
+.right
+  float: right
+.highlight
+  color: $orange
+
+//Grid
+html, body
+  height: 99%
+
+body
+  font-family: "museo-sans", $helvetica
+  background: $white
+  color: rgba(0, 0, 0, 0.5)
+  border-top: 3px solid $orange
+  text-rendering: optimizeLegibility
+
+header
+  left: 0
+  padding-top: 5em
+  margin-right: auto
+  margin-left: auto
+
+a, a:visited
+  color: $dark-gray
+  text-decoration: none
+  line-height: 1.5em
+
+a:hover
+  color: $orange
+
+p
+  line-height: 1.5em
+
+hr
+  border-bottom: none
+  border-top: none
+  margin-bottom: 1em
+
+h1
+  width: 100%
+  display: block
+  font-style: normal
+  font-weight: 300
+  a
+    color: rgba(0, 0, 0, 0.3)
+  a:hover
+    color: rgba(0, 0, 0, 0.7)
+
+h2
+  font-weight: 500
+  margin-bottom: 6px / $em
+  color: $super-dark-gray
+
+h3
+  font-weight: 300
+  margin-bottom: 5px / $em
+  color: $orange
+
+h4
+  font-weight: 300
+
+li
+  list-style-type: none
+  float: left
+
+footer
+  border-top: 1px solid $light-gray
+  text-align: left
+  margin: auto
+  a
+    margin: 0 .2em
+    color: $gray
+  a:visited
+    color: $gray
+  a:hover
+    color: $orange
+  p
+    font-size: ($font-size - 4) / $em
+    padding: .3em
+    color: $gray
+
+#masthead
+  margin-bottom: 3em
+
+#nav
+  position: relative
+  width: 100%
+  height: 1.45em
+  left: 0
+  border-bottom: 2px solid $orange
+  ul
+    li.active
+      color: $orange
+
+.banner
+  position: relative
+  margin: 0 auto 2em auto
+  img
+    width: 100%
+
+#intro
+  margin-bottom: 1.0em
+
+#about
+  margin-bottom: 1.0em
+
+#traits
+  margin-bottom: 1.0em
+
+.project
+  position: relative
+  display: table
+  background-color: $super-light-gray
+  margin-bottom: 1em
+  padding: 1em
+  overflow: auto
+  @include box-sizing(border-box)
+  .preview
+    display: block
+    @include box-sizing(border-box)
+  .details
+    vertical-align: middle
+    display: table-cell
+    @include box-sizing(border-box)
+  img
+    width: 100%
+    height: auto
+    border: 1px solid $light-gray
+    @include image-rendering(optimizeSpeed)
+
+/*
+ *Mobile layout
+ *240–479 px
+ *Zoomed out below 320 px
+@media screen and (min-width: 15em)
+  //Typography
+  p
+    font-size: ($font-size - 2) / $em
+  h1
+    font-size: ($font-size + 4) / $em
+  h2
+    font-size: ($font-size + 4) / $em
+  h3
+    font-size: ($font-size) / $em
+  //Grid
+  header
+    +width(4)
+  #nav
+    li
+      margin-left: 1.4em
+    li:first-child
+      margin-left: 0
+  #container
+    +width(4)
+    margin: 1em auto
+  .project
+    +width(4)
+    .preview
+      margin-bottom: .5em
+  footer
+    +width(4)
+    padding: 0 0 1em 0
+
+/*
+ *Wide mobile layout
+ *480-767 px
+ *Zoomed in above 480 px
+@media screen and (min-width: 30em)
+  //Typography
+  p
+    font-size: ($font-size - 1) / $em
+  h1
+    font-size: ($font-size + 10) / $em
+  h2
+    font-size: ($font-size + 5) / $em
+  h3
+    font-size: ($font-size + 2) / $em
+  //Grid
+  header
+    +width(6)
+  #container
+    +width(6)
+    margin: 1.5em auto
+  #nav
+    li
+      margin-left: 1.6em
+    li:first-child
+      margin-left: 0
+  #intro
+    +width(6)
+  #info
+    +width(6)
+  .project
+    +width(6)
+    .preview
+      margin-bottom: .5em
+  footer
+    +width(6)
+    padding: 0 0 3em 0
+
+/*
+ *Tablet layout
+ *600-911 px
+ *Zoomed in above 600 px
+@media screen and (min-width: 37.5em)
+  //Typography
+  p
+    font-size: ($font-size - 1) / $em
+  h1
+    font-size: ($font-size + 14) / $em
+  h2
+    font-size: ($font-size + 5) / $em
+  h3
+    font-size: ($font-size + 4) / $em
+  //Grid
+  header
+    +width(8)
+  #container
+    +width(8)
+    margin: 2em auto
+  #nav
+    li
+      margin-left: 1.8em
+    li:first-child
+      margin-left: 0
+  #intro
+    +width(8)
+  #info
+    +width(8)
+  .project
+    +width(8)
+    .preview
+      margin-bottom: .5em
+  footer
+    +width(8)
+    padding: 2em auto 2em auto
+
+/*
+ *Widescreen layout
+ *912-1887 px
+ *Zoomed in above 912 px
+@media screen and (min-width: 57em)
+  //Typography
+  p
+    font-size: ($font-size + 2) / $em
+  h1
+    font-size: ($font-size + 14) / $em
+  h2
+    font-size: ($font-size + 8) / $em
+  h3
+    font-size: ($font-size + 7) / $em
+  //Grid
+  header
+    +width(12)
+  #container
+    +width(12)
+    margin: 2em auto 3em auto
+  #nav
+    li
+      margin-left: 2.0em
+    li:first-child
+      margin-left: 0
+  #intro
+    +width(12)
+  #info
+    +width(12)
+  .project
+    +width(12)
+    .preview
+      margin-bottom: 0
+      width: 45%
+      float: right
+    .details
+      width: 50%
+      float: left
+    .links
+      margin-top: .5em
+  footer
+    +width(12)
+    padding: 0 0 3em 0

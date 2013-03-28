@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title><%= @getPreparedTitle() %></title>
+    <%- @getBlock("meta").toHTML() %>
+    <%- @getBlock("styles").add(["/styles/screen.css"]).toHTML() %>
+</head>
+<body>
+  <header>
+    <div id="masthead">
+      <h1>
+        <a href="/"><span class="highlight">//</span> AustinKettner</a>
+      </h1>
+    </div>
+    <nav id="nav">
+      <ul>
+        <% for page in @getCollection("pages").toJSON(): %>
+          <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
+            <a href="<%= page.url %>">
+              <%= page.title %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </header>
+  <div id="container">
+    <%- @content %>
+  </div>
+  <div id="scripts">
+    <%- @getBlock("scripts").add(["/vendor/jquery.js","/vendor/google-analytics.js","/vendor/typekit.js","/scripts/script.js"]).toHTML() %>
+  </div>
+</body>
+</html>
