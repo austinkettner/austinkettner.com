@@ -3,7 +3,7 @@ docpadConfig = {
   # ...
   templateData:
     site:
-      title: "My Website"
+      title: "Austin Kettner"
     getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
   collections:
     pages: ->
@@ -11,6 +11,8 @@ docpadConfig = {
         model.setMetaDefaults({layout:"page"})
     posts: ->
       @getCollection('html').findAllLive({relativeOutDirPath:'posts'},[date:1])
+    projects: ->
+      @getCollection('html').findAllLive({relativeOutDirPath:'projects'})
 }
 
 # Export the Configuration

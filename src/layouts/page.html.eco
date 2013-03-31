@@ -2,6 +2,7 @@
 <head>
     <title><%= @getPreparedTitle() %></title>
     <%- @getBlock("meta").toHTML() %>
+    <%- @getBlock("scripts").add(["/vendor/typekit.js"]).toHTML() %>
     <%- @getBlock("styles").add(["/styles/screen.css"]).toHTML() %>
 </head>
 <body>
@@ -27,7 +28,7 @@
     <%- @content %>
   </div>
   <div id="scripts">
-    <%- @getBlock("scripts").add(["/vendor/jquery.js","/vendor/google-analytics.js","/vendor/typekit.js","/scripts/script.js"]).toHTML() %>
+    <%- @getBlock("scripts").add(["/vendor/jquery.js","/vendor/google-analytics.js","/scripts/script.js"]).toHTML() %>
   </div>
 </body>
 </html>
