@@ -13,15 +13,11 @@
       </h1>
     </div>
     <nav id="nav">
-      <ul>
-        <% for page in @getCollection("pages").toJSON(): %>
-          <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
-            <a href="<%= page.url %>">
-              <%= page.title %>
-            </a>
-          </li>
-        <% end %>
-      </ul>
+      <% for page in @getCollection("pages").toJSON(): %>
+        <a href="<%= page.url %>" class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
+          <%= page.title %>
+        </a>
+      <% end %>
     </nav>
   </header>
   <div id="container">
