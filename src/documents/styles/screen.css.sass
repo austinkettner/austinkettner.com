@@ -13,6 +13,19 @@
 .highlight
   color: $orange
 
+//Links
+a, a:visited
+  color: $dark-gray
+  text-decoration: none
+  line-height: 1.5em
+
+a:hover
+  color: $orange
+
+a.active
+  color: $orange
+
+
 //Grid
 html, body
   height: 99%
@@ -29,14 +42,6 @@ header
   padding-top: 5em
   margin-right: auto
   margin-left: auto
-
-a, a:visited
-  color: $dark-gray
-  text-decoration: none
-  line-height: 1.5em
-
-a:hover
-  color: $orange
 
 p
   line-height: 1.5em
@@ -67,7 +72,12 @@ h4
 
 li
   list-style-type: none
-  float: left
+
+//NavBar
+#nav
+  border-bottom: 2px solid $orange
+  a
+    margin-right: 2%
 
 footer
   border-top: 1px solid $light-gray
@@ -91,16 +101,6 @@ footer
     a
       color: $super-dark-gray
     a:hover
-      color: $orange
-
-#nav
-  position: relative
-  width: 100%
-  height: 1.45em
-  left: 0
-  border-bottom: 2px solid $orange
-  ul
-    li.active
       color: $orange
 
 .banner
