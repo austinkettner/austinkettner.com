@@ -6,11 +6,14 @@ pageOrder: 3
 ---
 
 h2 Blog
-ul.posts
-  each doc in getCollection('posts').toJSON()
-    li.post
-      .date
-        span.month-day
-        span.year
-      .title
-        a(href=doc.url)= doc.title
+p
+  | Eloquent blog posts will appear here shortly!
+//-
+  ul.posts
+    each doc in getCollection('posts').toJSON()
+      li.post
+        .date
+          span.month-day
+          span.year
+        .title
+          a(href=doc.url)= doc.title

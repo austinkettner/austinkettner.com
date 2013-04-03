@@ -4,6 +4,7 @@
     <%- @getBlock("meta").toHTML() %>
     <%- @getBlock("scripts").add(["/vendor/typekit.js"]).toHTML() %>
     <%- @getBlock("styles").add(["/styles/screen.css"]).toHTML() %>
+    <link href="/images/favicon.ico" rel="icon" type="image/x-icon">
 </head>
 <body>
   <header>
