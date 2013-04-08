@@ -12,7 +12,7 @@ docpadConfig = {
     posts: ->
       @getCollection('html').findAllLive({relativeOutDirPath:'posts'},[date:1])
     projects: ->
-      @getCollection('html').findAllLive({relativeOutDirPath:'projects'})
+      @getCollection('html').findAllLive({relativeOutDirPath:/projects[\/\\]\w+/})
   plugins:
     sitemap:
       cachetime: 600000
