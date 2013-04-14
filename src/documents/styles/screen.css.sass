@@ -3,13 +3,13 @@
 @import modules/grid.css.scss
 @import modules/normalize.css
 @import modules/colors.css.sass
-@import iconic/iconic_stroke.css
 
-//Classes
-.highlight
-  color: $orange
+// Definitions
+$fg-column: 60px
+$fg-gutter: 25px
+$fg-max-columns: 3
 
-//Links
+// Links
 a, a:visited
   color: $dark-gray
   text-decoration: none
@@ -21,8 +21,7 @@ a:hover
 a.active
   color: $orange
 
-
-//Grid
+// Main Stylin'
 html, body
   height: 99%
 
@@ -33,9 +32,13 @@ body
   border-top: 3px solid $orange
   text-rendering: optimizeLegibility
 
+nav
+  border-bottom: 2px solid $orange
+  a
+    margin-right: 2%
+
 header
   left: 0
-  padding-top: 5em
   margin-right: auto
   margin-left: auto
 
@@ -53,6 +56,10 @@ h1
   display: block
   font-style: normal
   font-weight: 300
+  a
+    color: $super-dark-gray
+  a:hover
+    color: $orange
 
 h2
   font-weight: 500
@@ -70,55 +77,40 @@ h4
 li
   list-style-type: none
 
-//NavBar
-#nav
-  border-bottom: 2px solid $orange
-  a
-    margin-right: 2%
+img
+  width: 100%
+  margin-bottom: 1em
+
+// Layout Styling
+
+.highlight
+  color: $orange
 
 #masthead
-  margin-bottom: 3em
-  h1
-    a
-      color: $super-dark-gray
-    a:hover
-      color: $orange
+  margin: 2.5em 0
 
-.banner
-  position: relative
-  margin: 0 auto 2em auto
-  img
+ul#projects
+  height: 250px
+  text-align: justify
+  &:after
+    content: ''
     width: 100%
+    display: inline-block
 
-#intro
-  margin-bottom: 1.0em
-
-#about
-  margin-bottom: 1.0em
-
-#traits
-  margin-bottom: 1.0em
-
-.project
-  position: relative
-  display: table
+#projects li
+  vertical-align: top
+  display: inline-block
+  width: 250px // move to per-display styling
+  height: 150px // move to per-display styling
+  margin-bottom: 1em // move to per-display styling
   background-color: $super-light-gray
-  margin-bottom: 1em
-  padding: 1em
-  overflow: auto
-  @include box-sizing(border-box)
-  .preview
-    display: block
-    @include box-sizing(border-box)
-  .details
-    vertical-align: middle
-    display: table-cell
-    @include box-sizing(border-box)
-  img
+  &:nth-child(3n + 1)
+    margin-left: 0
+  .image
+    position: absolute
     width: 100%
     height: auto
-    border: 1px solid $light-gray
-    @include image-rendering(optimizeSpeed)
+
 
 /*
  *Mobile layout
@@ -246,7 +238,7 @@ li
     +width(12)
   #container
     +width(12)
-    margin: 2em auto 3em auto
+    margin: 1em auto 2em auto
   #nav
     li
       margin-left: 2.0em
