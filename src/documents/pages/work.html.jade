@@ -6,10 +6,10 @@ pageOrder: 2
 ---
 
 h2 Work
-p
-  | A full log containing all my work is coming soon!
+p A full log containing all my work is coming soon!
 
-each document in getCollection('projects').toJSON()
-  entry
-    .image= document.thumbnail
-    .title= document.title
+ul#projects
+  each document in getCollection('projects').toJSON()
+    li
+      div.title= document.title
+      a(href= document.thumbnail)

@@ -3,5 +3,6 @@ layout: page
 ---
 
 <div class="post">
+  <%- @document.title %>
   <%- @content %>
 </div>

@@ -19,6 +19,7 @@
     "npm": "1.2.15"
   },
   "dependencies": {
-    "docpad-plugin-sitemap": "~0.2.0"
+    "docpad-plugin-sitemap": "~0.2.0",
+    "docpad-plugin-associatedfiles": "~2.1.3"
   }
 }
