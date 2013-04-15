@@ -11,5 +11,7 @@ p A full log containing all my work is coming soon!
 ul#projects
   each document in getCollection('projects').toJSON()
     li
-      div.title= document.title
-      a(href= document.thumbnail)
+      div.title
+        a(href= document.url)= document.title
+      div.image
+        a(href= document.url)
