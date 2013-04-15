@@ -1,13 +1,7 @@
 //Imports
-@import bourbon/bourbon
 @import modules/grid.css.scss
 @import modules/normalize.css
 @import modules/colors.css.sass
-
-// Definitions
-$fg-column: 60px
-$fg-gutter: 25px
-$fg-max-columns: 3
 
 // Links
 a, a:visited
@@ -26,11 +20,10 @@ html, body
   height: 99%
 
 body
-  font-family: "museo-sans", $helvetica
+  font-family: "museo-sans"
   background: $white
   color: rgba(0, 0, 0, 0.5)
   border-top: 3px solid $orange
-  text-rendering: optimizeLegibility
 
 nav
   border-bottom: 2px solid $orange
@@ -100,9 +93,9 @@ ul#projects
 #projects li
   vertical-align: top
   display: inline-block
-  width: 250px // move to per-display styling
+  width: 266px // move to per-display styling
   height: 150px // move to per-display styling
-  margin-bottom: 1em // move to per-display styling
+  margin-bottom: 1.2em // move to per-display styling
   background-color: $super-light-gray
   &:nth-child(3n + 1)
     margin-left: 0
@@ -110,7 +103,6 @@ ul#projects
     position: absolute
     width: 100%
     height: auto
-
 
 /*
  *Mobile layout
