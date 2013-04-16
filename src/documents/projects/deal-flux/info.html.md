@@ -1,7 +1,7 @@
 ---
 title: Deal Flux
+identifier: deal-flux
 platform: Windows 8 & Windows Phone
-thumbnail:
 layout: project
 ---
 

@@ -6,10 +6,9 @@ pageOrder: 2
 ---
 
 h1 Work
-ul#projects
+.projects
   each document in getCollection('projects').toJSON()
-    li
-      div.title
+    .project(class= document.identifier)
+      img(src= '/' + document.relativeDirPath + '/logo.png')
+      h4.title
         a(href= document.url)= document.title
-      a.image(href= document.url)
-        a(src= '/' + document.relativeDirPath + '/1.png')

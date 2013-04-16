@@ -3,21 +3,8 @@
 @import modules/normalize.css
 @import modules/colors.css.sass
 
-// Links
-a, a:visited
-  color: $super-dark-gray
-  text-decoration: none
-  line-height: 1.5em
-
-a:hover
-  color: $orange
-
-a.active
-  color: $orange
-
 
 // Main Stylin'
-
 html, body
   height: 99%
 
@@ -72,53 +59,78 @@ img
   width: 100%
   margin-bottom: 1em
 
+a, a:visited
+  color: $super-dark-gray
+  text-decoration: none
+  line-height: 1.5em
 
-// Class and ID Styling
-
-.highlight
+a:hover
   color: $orange
 
-.row
-  display: inline-block
+a.active
+  color: $orange
 
-.third
-  width: 32%
-  height: auto
-  float: left
-  text-align: left
-  margin-left: 1em
-  display: inline-block
-
-.first
-  margin-left: 0em
+// Unique Classes
 
 #masthead
   margin: 2.5em 0
-  a
-    color: $super-dark-gray
-  a:hover
-    color: $orange
 
-ul#projects
-  height: 250px
-  text-align: justify
+.projects
   &:after
     content: ''
     width: 100%
+  .project
     display: inline-block
-  li
-    vertical-align: top
-    display: inline-block
+    float: left
     width: 266px // move to per-display styling
-    height: 150px // move to per-display styling
+    height: 200px // move to per-display styling
     margin-bottom: 1.2em // move to per-display styling
-    background-color: $super-light-gray
+    margin-left: 1.2em // move to per display styling
+    position: relative
     &:nth-child(3n + 1)
       margin-left: 0
-    .image
+    img
+      width: 130px
+      height: 130px
       position: absolute
-      width: 100%
-      height: auto
+      top: 42%
+      left: 28%
+      margin-top: -50px
+      margin-bottom: -50px
+    .title
+      position: absolute
+      bottom: 2px
+      right: 10px
+
+// Blog Styling
+
+.posts
+  float: right
+
+// Color Classes
+.highlight
+  color: $orange
+
+.fortress
+  background: $orange
+
+.digital-tranquility
+  background: $orange
+
+.deal-flux
+  background: $orange
+
+.di-fm
+  background: $orange
+
+.berran
+  background: $orange
+
+.quixby
+  background: $orange
+
+.hackernews-reader
+  background: $orange
 
 /*
  *Mobile layout
@@ -137,21 +149,13 @@ ul#projects
   //Grid
   header
     +width(4)
-  #nav
-    li
-      margin-left: 1.4em
-    li:first-child
-      margin-left: 0
   #container
     +width(4)
     margin: 1em auto
   .project
     +width(4)
-    .preview
-      margin-bottom: .5em
   footer
     +width(4)
-    padding: 0 0 1em 0
 
 /*
  *Wide mobile layout
@@ -173,22 +177,14 @@ ul#projects
   #container
     +width(6)
     margin: 1.5em auto
-  #nav
-    li
-      margin-left: 1.6em
-    li:first-child
-      margin-left: 0
   #intro
     +width(6)
   #info
     +width(6)
   .project
     +width(6)
-    .preview
-      margin-bottom: .5em
   footer
     +width(6)
-    padding: 0 0 3em 0
 
 /*
  *Tablet layout
@@ -210,11 +206,6 @@ ul#projects
   #container
     +width(8)
     margin: 2em auto
-  #nav
-    li
-      margin-left: 1.8em
-    li:first-child
-      margin-left: 0
   #intro
     +width(8)
   #info
@@ -225,7 +216,6 @@ ul#projects
       margin-bottom: .5em
   footer
     +width(8)
-    padding: 2em auto 2em auto
 
 /*
  *Widescreen layout
@@ -247,26 +237,11 @@ ul#projects
   #container
     +width(12)
     margin: 1em auto 2em auto
-  #nav
-    li
-      margin-left: 2.0em
-    li:first-child
-      margin-left: 0
   #intro
     +width(12)
-  #info
+  .projects
     +width(12)
-  .project
-    +width(12)
-    .preview
-      margin-bottom: 0
-      width: 45%
-      float: right
-    .details
-      width: 50%
-      float: left
-    .links
-      margin-top: .5em
+  .posts
+    +width(9)
   footer
     +width(12)
-    padding: 0 0 3em 0
