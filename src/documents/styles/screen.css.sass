@@ -5,7 +5,7 @@
 
 // Links
 a, a:visited
-  color: $dark-gray
+  color: $super-dark-gray
   text-decoration: none
   line-height: 1.5em
 
@@ -15,14 +15,16 @@ a:hover
 a.active
   color: $orange
 
+
 // Main Stylin'
+
 html, body
   height: 99%
 
 body
   font-family: "museo-sans"
   background: $white
-  color: rgba(0, 0, 0, 0.5)
+  color: rgba(119, 119, 119, 1)
   border-top: 3px solid $orange
 
 nav
@@ -36,8 +38,9 @@ header
   margin-left: auto
 
 p
-  line-height: 1.5em
+  line-height: 1.4em
   margin-bottom: .35em
+  font-weight: 300
 
 hr
   border-bottom: none
@@ -45,24 +48,19 @@ hr
   margin-bottom: 1em
 
 h1
-  width: 100%
-  display: block
-  font-style: normal
   font-weight: 300
-  a
-    color: $super-dark-gray
-  a:hover
-    color: $orange
+  margin-bottom: 3px / $em
+  color: $super-dark-gray
 
 h2
-  font-weight: 500
+  font-weight: 300
   margin-bottom: 6px / $em
   color: $super-dark-gray
 
 h3
   font-weight: 300
-  margin-bottom: 5px / $em
-  color: $orange
+  margin-bottom: 10px / $em
+  color: $super-dark-gray
 
 h4
   font-weight: 300
@@ -74,13 +72,32 @@ img
   width: 100%
   margin-bottom: 1em
 
-// Layout Styling
+
+// Class and ID Styling
 
 .highlight
   color: $orange
 
+.row
+  display: inline-block
+
+.third
+  width: 32%
+  height: auto
+  float: left
+  text-align: left
+  margin-left: 1em
+  display: inline-block
+
+.first
+  margin-left: 0em
+
 #masthead
   margin: 2.5em 0
+  a
+    color: $super-dark-gray
+  a:hover
+    color: $orange
 
 ul#projects
   height: 250px
@@ -89,20 +106,19 @@ ul#projects
     content: ''
     width: 100%
     display: inline-block
-
-#projects li
-  vertical-align: top
-  display: inline-block
-  width: 266px // move to per-display styling
-  height: 150px // move to per-display styling
-  margin-bottom: 1.2em // move to per-display styling
-  background-color: $super-light-gray
-  &:nth-child(3n + 1)
-    margin-left: 0
-  .image
-    position: absolute
-    width: 100%
-    height: auto
+  li
+    vertical-align: top
+    display: inline-block
+    width: 266px // move to per-display styling
+    height: 150px // move to per-display styling
+    margin-bottom: 1.2em // move to per-display styling
+    background-color: $super-light-gray
+    &:nth-child(3n + 1)
+      margin-left: 0
+    .image
+      position: absolute
+      width: 100%
+      height: auto
 
 /*
  *Mobile layout
@@ -218,13 +234,13 @@ ul#projects
 @media screen and (min-width: 57em)
   //Typography
   p
-    font-size: ($font-size + 2) / $em
+    font-size: ($font-size - 0) / $em
   h1
-    font-size: ($font-size + 14) / $em
-  h2
     font-size: ($font-size + 8) / $em
+  h2
+    font-size: ($font-size + 6) / $em
   h3
-    font-size: ($font-size + 7) / $em
+    font-size: ($font-size + 2) / $em
   //Grid
   header
     +width(12)

@@ -5,13 +5,11 @@ isPage: true
 pageOrder: 2
 ---
 
-h2 Work
-p A full log containing all my work is coming soon!
-
+h1 Work
 ul#projects
   each document in getCollection('projects').toJSON()
     li
       div.title
         a(href= document.url)= document.title
-      div.image
-        a(href= document.url)
+      a.image(href= document.url)
+        a(src= '/' + document.relativeDirPath + '/1.png')

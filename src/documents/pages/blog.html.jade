@@ -5,13 +5,13 @@ isPage: true
 pageOrder: 3
 ---
 
-h2 Blog
+h1 Blog
 p My thoughts on a plethora of topics and events.
 ul.posts
   each doc in getCollection('posts').toJSON()
     li.post
       .date
-        span.month-day
+        span.month-day= doc.date.toDateString()
         span.year
       .title
-        a(href=doc.url)= doc.title
+        a(href= doc.url)= doc.title
