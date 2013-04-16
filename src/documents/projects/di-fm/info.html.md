@@ -1,6 +1,7 @@
 ---
 title: DI.FM
 platform: Windows 8
+identifier: di-fm
 layout: project
 ---
 

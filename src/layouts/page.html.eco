@@ -27,5 +27,7 @@
   <div id="scripts">
     <%- @getBlock("scripts").add(["/vendor/jquery.js","/vendor/google-analytics.js","/scripts/script.js"]).toHTML() %>
   </div>
+  <footer>
+  </footer>
 </body>
 </html>
