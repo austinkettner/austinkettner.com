@@ -6,12 +6,12 @@ pageOrder: 3
 ---
 
 h1 Blog
-p My thoughts on a plethora of topics and events.
-ul.posts
+.blog
   each doc in getCollection('posts').toJSON()
-    li.post
-      .date
-        span.month-day= doc.date.toDateString()
-        span.year
-      .title
+    - var arrDate = doc.date.toDateString().split(' ')
+    .post
+      h2
         a(href= doc.url)= doc.title
+      .date
+        span.month-day.highlight= arrDate[1] + ' ' + arrDate[2]
+        span.year= arrDate[3]
