@@ -3,7 +3,6 @@
 @import modules/normalize.css
 @import modules/colors.css.sass
 
-
 // Main Stylin'
 html, body
   height: 99%
@@ -16,8 +15,9 @@ body
 
 nav
   border-bottom: 2px solid $orange
+  padding-bottom: 2px
   a
-    margin-right: 2%
+    margin-right: 4%
 
 header
   left: 0
@@ -35,8 +35,8 @@ hr
   margin-bottom: 1em
 
 h1
-  font-weight: 300
-  margin-bottom: 3px / $em
+  font-weight: 500
+  margin-bottom: 6px / $em
   color: $super-dark-gray
 
 h2
@@ -45,12 +45,14 @@ h2
   color: $super-dark-gray
 
 h3
-  font-weight: 300
-  margin-bottom: 10px / $em
-  color: $super-dark-gray
+  font-weight: 500
+  margin-bottom: 4px / $em
+  color: $dark-gray
 
 h4
   font-weight: 300
+  margin-bottom: 2px / $em
+  color: $gray
 
 li
   list-style-type: none
@@ -61,8 +63,9 @@ img
 
 a, a:visited
   color: $super-dark-gray
+  font-weight: 500
   text-decoration: none
-  line-height: 1.5em
+  line-height: 1.4em
 
 a:hover
   color: $orange
@@ -70,10 +73,23 @@ a:hover
 a.active
   color: $orange
 
-// Unique Classes
+// Classes
+
+.highlight
+  color: $orange
+
+.third
+  width: 30%
+  float: left
+  margin-left: 1em
+
+.first
+  margin-left: 0
 
 #masthead
-  margin: 2.5em 0
+  margin: 6em 0 4em 0
+  a
+    font-weight: 300
 
 .projects
   &:after
@@ -102,34 +118,28 @@ a.active
       bottom: 2px
       right: 10px
 
-// Blog Styling
-.posts
-  float: right
+// Blog Stylin'
+.blog
+.post
+  height: 45px
+  padding-left: 5em
+  position: relative
+  margin-bottom: 1em
+  h2
+    padding-bottom: 11px
+    border-bottom: 1px solid $light-gray
+  .date
+    position: absolute
+    top: 0
+    left: 0
+    text-align: right
+    padding: 4px 1em 0 0
+    border-right: 1px solid $light-gray
+    .month-day
+      display: block
+    .year
+      display: block
 
-// Color Classes
-.highlight
-  color: $orange
-
-.fortress
-  background: $orange
-
-.digital-tranquility
-  background: $orange
-
-.deal-flux
-  background: $orange
-
-.di-fm
-  background: $orange
-
-.berran
-  background: $orange
-
-.quixby
-  background: $orange
-
-.hackernews-reader
-  background: $orange
 
 /*
  *Mobile layout
@@ -222,10 +232,12 @@ a.active
  *Zoomed in above 912 px
 @media screen and (min-width: 57em)
   //Typography
+  a
+    font-size: ($font-size - 0) / $em
   p
     font-size: ($font-size - 0) / $em
   h1
-    font-size: ($font-size + 8) / $em
+    font-size: ($font-size + 10) / $em
   h2
     font-size: ($font-size + 6) / $em
   h3
@@ -235,7 +247,7 @@ a.active
     +width(12)
   #container
     +width(12)
-    margin: 1em auto 2em auto
+    margin: 2em auto 2em auto
   #intro
     +width(12)
   .projects
