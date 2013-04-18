@@ -6,9 +6,10 @@ pageOrder: 2
 ---
 
 h1 Work
-.projects
+section.projects
   each document in getCollection('projects').toJSON()
     .project(class= document.identifier)
-      img(src= '/' + document.relativeDirPath + '/logo.png')
-      h4.title
+      h2
         a(href= document.url)= document.title
+      img(src= '/' + document.relativeDirPath + '/thumbnail.png')
+      p= document.content
