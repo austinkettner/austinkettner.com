@@ -84,39 +84,34 @@ a.active
   color: $orange
 
 .detail
-  +width(4)
-  float: left
-  margin-left: 1em
-
-.first
-  margin-left: 0
+  +width(4) // move to per display styling
+  float: left // move to per display styling
+  margin-left: 1em // move to per display styling
+  &:nth-child(3n + 1)
+    margin-left: 0
 
 .projects
   &:after
     content: ''
     width: 100%
   .project
-    display: inline-block
-    float: left
-    width: 266px // move to per-display styling
-    height: 200px // move to per-display styling
+    height: auto
+    min-height: 12em // move to per-display styling
+    width: auto
     margin-bottom: 1.2em // move to per-display styling
-    margin-left: 1.2em // move to per display styling
+    background: $super-light-gray
+    padding-left: $cols4
     position: relative
-    &:nth-child(3n + 1)
-      margin-left: 0
     img
-      width: 130px
-      height: 130px
+      width: 175px
+      height: 175px
       position: absolute
-      top: 42%
-      left: 25%
-      margin-top: -50px
-      margin-bottom: -50px
-    .title
-      position: absolute
-      bottom: 2px
-      right: 10px
+      left: 1em
+      top: 1em
+      margin: 0
+      display: block
+    h2
+      padding-top: 1em
 
 // Blog Stylin'
 .blog
