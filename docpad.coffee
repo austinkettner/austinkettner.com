@@ -10,9 +10,9 @@ docpadConfig = {
       @getCollection('html').findAllLive({isPage:true},{pageOrder: $exists: true}, {pageOrder:1}).on "add", (model) ->
         model.setMetaDefaults({layout:"page"})
     posts: ->
-      @getCollection('html').findAllLive({relativeOutDirPath:'posts'},[date:-1])
+      @getCollection('html').findAllLive({relativeOutDirPath:'posts'},{date:-1})
     projects: ->
-      @getCollection('html').findAllLive({relativeOutDirPath:/projects[\/\\]\w+/})
+      @getCollection('html').findAllLive({relativeOutDirPath:/projects[\/\\]\w+/},{pageOrder:1})
   plugins:
     sitemap:
       cachetime: 600000
