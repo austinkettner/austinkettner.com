@@ -2,6 +2,7 @@
 title: Deal Flux
 identifier: deal-flux
 platform: Windows 8 & Windows Phone
+pageOrder: 2
 layout: project
 ---
 
