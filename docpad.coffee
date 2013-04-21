@@ -18,6 +18,8 @@ docpadConfig = {
       cachetime: 600000
       changefreq: 'weekly'
       priority: 0.5
+    sass:
+      compass: true
 }
 
 # Export the Configuration

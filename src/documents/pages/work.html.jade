@@ -5,11 +5,7 @@ isPage: true
 pageOrder: 2
 ---
 
-h1 Work
 section.projects
   each document in getCollection('projects').toJSON()
-    .project(class= document.identifier)
-      h2
-        a(href= document.url)= document.title
+    .project
       img(src= '/' + document.relativeDirPath + '/thumbnail.png')
-      p= document.content

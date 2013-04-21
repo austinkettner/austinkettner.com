@@ -2,6 +2,7 @@
 @import modules/grid.css.scss
 @import modules/normalize.css
 @import modules/colors.css.sass
+@import compass/css3
 
 // Main Stylin'
 html, body
@@ -9,7 +10,8 @@ html, body
 
 body
   font-family: "museo-sans"
-  background: $white
+  background-color: #f5f5f5
+  background: url('/images/bg.png')
   color: rgba(119, 119, 119, 1)
   border-top: 3px solid $orange
 
@@ -23,6 +25,20 @@ header
   left: 0
   margin-right: auto
   margin-left: auto
+
+footer
+  margin-right: auto
+  margin-left: auto
+  padding: .5em 0 2em 0
+  border-top: 1px solid $light-gray
+  &:after
+    content: ''
+    display: block
+    clear: both
+  p
+    font-size: 12px
+    color: $gray
+    float: right
 
 p
   line-height: 1.4em
@@ -83,6 +99,11 @@ a.active
 .highlight
   color: $orange
 
+.details
+  &:after
+    content: ''
+    display: block
+    clear: both
 .detail
   +width(4) // move to per display styling
   float: left // move to per display styling
@@ -93,30 +114,22 @@ a.active
 .projects
   &:after
     content: ''
-    width: 100%
+    display: block
+    clear: both
   .project
-    height: auto
-    min-height: 12em // move to per-display styling
-    width: auto
-    margin-bottom: 1.2em // move to per-display styling
-    background: $super-light-gray
-    padding-left: $cols5
-    padding-right: $gutter
-    position: relative
-    border: 1px solid $light-gray
+    display: inline-block
+    vertical-align: top
+    margin-left: 30px
+    margin-bottom: 30px
+    &:nth-child(3n + 1)
+      margin-left: 0
     img
-      width: 284px
-      height: 160px
-      position: absolute
-      left: 1em
-      top: 1em
+      width: 16em
+      height: auto
       margin: 0
-      display: block
-    h2
-      padding-top: .65em
+
 
 // Blog Stylin'
-.blog
 .post
   height: 45px
   padding-left: 5em
@@ -158,8 +171,6 @@ a.active
   #container
     +width(4)
     margin: 1em auto
-  .project
-    +width(4)
   footer
     +width(4)
 
@@ -184,10 +195,6 @@ a.active
     +width(6)
     margin: 1.5em auto
   #intro
-    +width(6)
-  #info
-    +width(6)
-  .project
     +width(6)
   footer
     +width(6)
@@ -214,12 +221,6 @@ a.active
     margin: 2em auto
   #intro
     +width(8)
-  #info
-    +width(8)
-  .project
-    +width(8)
-    .preview
-      margin-bottom: .5em
   footer
     +width(8)
 
@@ -227,7 +228,7 @@ a.active
  *Widescreen layout
  *912-1887 px
  *Zoomed in above 912 px
-@media screen and (min-width: 57em)
+@media screen and (min-width: 60em)
   //Typography
   a
     font-size: ($font-size - 0) / $em
@@ -244,10 +245,8 @@ a.active
     +width(12)
   #container
     +width(12)
-    margin: 2em auto 2em auto
+    margin: 2em auto 3em auto
   #intro
-    +width(12)
-  .projects
     +width(12)
   .posts
     +width(9)
