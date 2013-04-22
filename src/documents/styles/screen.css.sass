@@ -10,16 +10,17 @@ html, body
 
 body
   font-family: "museo-sans"
-  background-color: #f5f5f5
-  background: url('/images/bg.png')
+  background: white
   color: rgba(119, 119, 119, 1)
   border-top: 3px solid $orange
 
 nav
   border-bottom: 2px solid $orange
-  padding-bottom: 2px
+  padding-bottom: 3px
   a
     margin-right: 4%
+    font-weight: 700
+    font-size: 14px
 
 header
   left: 0
@@ -89,8 +90,7 @@ a:hover
 a.active
   color: $orange
 
-// Classes and ID's
-
+// General Stylin'
 #masthead
   margin: 6em 0 4em 0
   a
@@ -99,52 +99,58 @@ a.active
 .highlight
   color: $orange
 
-.details
+// About Page Stylin'
+#details
   &:after
     content: ''
     display: block
     clear: both
-.detail
-  +width(4) // move to per display styling
-  float: left // move to per display styling
-  margin-left: 1em // move to per display styling
-  &:nth-child(3n + 1)
-    margin-left: 0
+  .detail
+    +width(4) // move to per display styling
+    float: left // move to per display styling
+    margin-left: 1em // move to per display styling
+    &:nth-child(3n + 1)
+      margin-left: 0
 
-.projects
+// Work Page Stylin'
+#work
   &:after
     content: ''
     display: block
     clear: both
   .project
     display: inline-block
-    vertical-align: top
-    margin-left: 30px
-    margin-bottom: 30px
+    margin-left: 1.25em // move to per display styling
+    margin-bottom: 1.25em // move to per display styling
+    background: $white
     &:nth-child(3n + 1)
       margin-left: 0
     img
-      width: 16em
+      width: 16.5em
       height: auto
       margin: 0
-
+      display: block
+      &:hover
+        opacity: .8
+        cursor: pointer
 
 // Blog Stylin'
+#blog
+  margin-top: 1em
 .post
-  height: 45px
-  padding-left: 5em
+  padding-left: 4em
   position: relative
   margin-bottom: 1em
   h2
-    padding-bottom: 11px
-    border-bottom: 1px solid $light-gray
+    border-left: 1px solid $light-gray
+    margin: 0
+    padding: .25em 0 .25em 10px
   .date
     position: absolute
     top: 0
     left: 0
     text-align: right
-    padding: 4px 1em 0 0
-    border-right: 1px solid $light-gray
+    padding: .25em 0 .25em 0
     .month-day
       display: block
     .year
@@ -245,10 +251,14 @@ a.active
     +width(12)
   #container
     +width(12)
-    margin: 2em auto 3em auto
+    margin: 1.25em auto 3em auto
   #intro
     +width(12)
-  .posts
-    +width(9)
+  #work
+    +width(12)
+  #blog
+    +width(12)
+  #details
+    +width(12)
   footer
     +width(12)

@@ -5,7 +5,7 @@ isPage: true
 pageOrder: 2
 ---
 
-section.projects
+section#work
   each document in getCollection('projects').toJSON()
     .project
       img(src= '/' + document.relativeDirPath + '/thumbnail.png')
