@@ -6,7 +6,8 @@ pageOrder: 3
 ---
 
 h1 Blog
-.blog
+h2.highlight Recent posts of mine
+section#blog
   each doc in getCollection('posts').toJSON()
     - var arrDate = doc.date.toDateString().split(' ')
     article.post
