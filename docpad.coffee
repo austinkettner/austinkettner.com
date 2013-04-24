@@ -4,6 +4,7 @@ docpadConfig = {
   templateData:
     site:
       title: "Austin Kettner"
+      author: "Austin Kettner"
     getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
   collections:
     pages: ->

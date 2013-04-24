@@ -2,7 +2,10 @@
 layout: page
 ---
 
+<% arrDate = @document.date.toDateString().split(' ') %>
+
 <article>
-  <%- @document.title %>
-  <%- @content %>
+  <h1><%- @document.title %></h1>
+  <h4> Posted on <%- arrDate[1] + ' ' + arrDate[2] + ', ' + arrDate[3] %></h4>
+  <div id="content"><%- @content %></div>
 </div>
