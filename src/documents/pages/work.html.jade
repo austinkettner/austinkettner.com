@@ -8,4 +8,6 @@ pageOrder: 2
 section#work
   each document in getCollection('projects').toJSON()
     .project
-      img(src= '/' + document.relativeDirPath + '/thumbnail.png')
+      a(href= document.url)
+        img(src= '/' + document.relativeDirPath + '/thumbnail.png')
+
