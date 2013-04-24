@@ -101,36 +101,36 @@ a.active
   color: $orange
 
 // About Page Stylin'
-#details
-  &:after
-    content: ''
-    display: block
-    clear: both
-  .detail
-    +width(4) // move to per display styling
-    float: left // move to per display styling
-    margin-left: 1em // move to per display styling
-    &:nth-child(3n + 1)
-      margin-left: 0
+#about
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-flow: row wrap
+  flex-flow: row wrap
+  -webkit-justify-content: space-between
+  justify-content: space-between
+  -webkit-align-items: flex-start
+  align-items: flex-start
+  -webkit-align-content: space-between
+  align-content: space-between
 
 // Work Page Stylin'
 #work
-  &:after
-    content: ''
-    display: block
-    clear: both
+  display: -webkit-flex
+  display: flex
+  -webkit-flex-flow: row wrap
+  flex-flow: row wrap
+  -webkit-justify-content: space-between
+  justify-content: space-between
+  -webkit-align-items: flex-start
+  align-items: flex-start
+  -webkit-align-content: space-between
+  align-content: space-between
   .project
-    display: inline-block
-    margin-left: 1.25em // move to per display styling
-    margin-bottom: 1.25em // move to per display styling
     background: $white
-    &:nth-child(3n + 1)
-      margin-left: 0
     img
       width: 16.5em
       height: auto
-      margin: 0
-      display: block
+      margin: auto
       &:hover
         opacity: .8
         cursor: pointer
@@ -163,7 +163,7 @@ a.active
   img
     border: 1px solid $light-gray
     margin-bottom: 1em
-    width: 100%%
+    width: 100%
 
 /*
  *Mobile layout
@@ -174,9 +174,9 @@ a.active
   p
     font-size: ($font-size - 2) / $em
   h1
-    font-size: ($font-size + 4) / $em
+    font-size: ($font-size + 6) / $em
   h2
-    font-size: ($font-size + 4) / $em
+    font-size: ($font-size + 3) / $em
   h3
     font-size: ($font-size) / $em
   //Grid
@@ -187,6 +187,17 @@ a.active
     margin: 1em auto
   footer
     +width(4)
+
+  //Pages
+  #work
+    +width(4)
+    height: 880px / $em
+  #blog
+    +width(4)
+  #about
+    .detail
+      width: 255px / $em
+      margin-bottom: .5em
 
 /*
  *Wide mobile layout
@@ -205,13 +216,23 @@ a.active
   //Grid
   header
     +width(6)
+
   #container
     +width(6)
     margin: 1.5em auto
-  #intro
-    +width(6)
   footer
     +width(6)
+
+  //Pages
+  #work
+    +width(6)
+    height: 900px / $em
+  #blog
+    +width(6)
+  #about
+    .detail
+      +width(6)
+      margin-bottom: .5em
 
 /*
  *Tablet layout
@@ -222,21 +243,31 @@ a.active
   p
     font-size: ($font-size - 1) / $em
   h1
-    font-size: ($font-size + 14) / $em
+    font-size: ($font-size + 10) / $em
   h2
     font-size: ($font-size + 5) / $em
   h3
     font-size: ($font-size + 4) / $em
+
   //Grid
   header
     +width(8)
   #container
     +width(8)
-    margin: 2em auto
-  #intro
-    +width(8)
+    margin: 1.25em auto 3em auto
   footer
     +width(8)
+
+  //Pages
+  #work
+    +width(8)
+    height: 535px / $em
+  #blog
+    +width(8)
+  #about
+    .detail
+      width: 255px / $em
+      margin-bottom: .5em
 
 /*
  *Widescreen layout
@@ -260,13 +291,17 @@ a.active
   #container
     +width(12)
     margin: 1.25em auto 3em auto
-  #intro
-    +width(12)
-  #work
-    +width(12)
-  #blog
-    +width(12)
-  #details
-    +width(12)
   footer
     +width(12)
+
+  // Pages
+  #work
+    +width(12)
+    height: 350px / $em
+  #blog
+    +width(12)
+  #about
+    +width(12)
+    .detail
+      width: 255px / $em
+      margin-bottom: .5em
