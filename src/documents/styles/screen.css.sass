@@ -9,23 +9,30 @@ html, body
   height: 99%
 
 body
-  font-family: "museo-sans"
   background: $white
   color: rgba(119, 119, 119, 1)
   border-top: 3px solid $orange
-
-nav
-  border-bottom: 2px solid $orange
-  padding-bottom: 3px
-  a
-    margin-right: 4%
-    font-weight: 700
-    font-size: 14px
+  font-family: 'Roboto', sans-serif
 
 header
-  left: 0
-  margin-right: auto
-  margin-left: auto
+  margin: 1em auto
+  padding: 20px 0
+  img
+    margin: 0
+    width: 62px
+    height: auto
+  #logo
+    display: inline-block
+
+nav
+  display: inline-block
+  text-align: right
+  float: right
+  padding: 20px 0
+  a
+    font-weight: 300
+    font-size: 15px
+    padding-left: 16px
 
 footer
   margin-right: auto
@@ -76,7 +83,7 @@ li
 
 img
   width: 100%
-  margin-bottom: 1em
+  margin-bottom: 1.5em
   display: inline-block
 
 a, a:visited
@@ -92,10 +99,6 @@ a.active
   color: $orange
 
 // General Stylin'
-#masthead
-  margin: 6em 0 4em 0
-  a
-    font-weight: 300
 
 .highlight
   color: $orange
@@ -294,7 +297,9 @@ a.active
   footer
     +width(12)
 
-  // Pages
+  // Pages & Section
+  #blog
+    +width(9)
   #work
     +width(12)
     height: 350px / $em
