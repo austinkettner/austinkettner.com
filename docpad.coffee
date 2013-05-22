@@ -5,7 +5,11 @@ docpadConfig = {
     site:
       title: "Austin Kettner"
       author: "Austin Kettner"
+
+    #Setting Page Title
     getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
+
+  # Defining Collections
   collections:
     pages: ->
       @getCollection('html').findAllLive({isPage:true},{pageOrder: $exists: true}, {pageOrder:1}).on "add", (model) ->
@@ -14,6 +18,8 @@ docpadConfig = {
       @getCollection('html').findAllLive({relativeOutDirPath:'posts'},{date:-1})
     projects: ->
       @getCollection('html').findAllLive({relativeOutDirPath:/projects[\/\\]\w+/},{pageOrder:1})
+
+  # Custom Plugin Settings
   plugins:
     sitemap:
       cachetime: 600000
