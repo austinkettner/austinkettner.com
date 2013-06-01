@@ -5,6 +5,8 @@ docpadConfig = {
     site:
       title: "Austin Kettner"
       author: "Austin Kettner"
+      description: "My personal website"
+      keywords: "website, personal, design, code, austin"
 
     #Setting Page Title
     getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
@@ -21,10 +23,6 @@ docpadConfig = {
 
   # Custom Plugin Settings
   plugins:
-    sitemap:
-      cachetime: 600000
-      changefreq: 'weekly'
-      priority: 0.5
     sass:
       compass: true
 }
