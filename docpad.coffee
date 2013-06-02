@@ -7,6 +7,7 @@ docpadConfig = {
       author: "Austin Kettner"
       description: "My personal website"
       keywords: "website, personal, design, code, austin"
+      copyright: "Copyright &#169; 2013"
 
     #Setting Page Title
     getPreparedTitle: -> if @document.title then "#{@document.title} | #{@site.title}" else @site.title
