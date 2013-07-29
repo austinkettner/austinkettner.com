@@ -1,6 +1,5 @@
 # Define the Configuration
 docpadConfig = {
-  # ...
   templateData:
     site:
       title: "Austin Kettner"

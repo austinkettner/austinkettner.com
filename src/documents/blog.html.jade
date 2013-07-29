@@ -1,0 +1,27 @@
+---
+title: Blog
+layout: page
+isPage: true
+pageOrder: 2
+---
+
+section#blog
+    article
+        h2 Latest Blog Posts
+        h4 All of my blog posts about tech news, updates, and Quixby
+        hr
+
+    each doc in getCollection('posts').toJSON()
+        - var arrDate = doc.date.toDateString().split(' ')
+        .post
+            h3
+                a(href= doc.url)= doc.title
+            .post-details
+                .date
+                    span.month-day= arrDate[1] + ' ' + arrDate[2] + ' '
+                    span.year= arrDate[3]
+                .author
+                    span.name= '-' + ' ' + site.author
+            p= doc.content.slice(0,350) + ' '
+                a(href= doc.url) Read More
+        hr
