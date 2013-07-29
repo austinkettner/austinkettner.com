@@ -1,0 +1,57 @@
+- var scripts = getBlock('scripts')
+- var styles = getBlock('styles')
+
+//- jQuery
+- scripts.add(["//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"])
+
+//- Bootstrap 3
+-styles.add(["/vendor/bootstrap/css/bootstrap.css"])
+-scripts.add(["/vendor/bootstrap/js/bootstrap.js"])
+
+//- Google Web Fonts
+- styles.add(["http://fonts.googleapis.com/css?family=Quicksand:300,400,700"])
+
+//- User
+- styles.add(["/styles/style.css"])
+
+!!!
+html(lang="en")
+  head
+
+    //- Meta
+    meta(http-equiv="content-type", content="text/html; charset=utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+
+    //- Site title and description
+    title= getPreparedTitle()
+    meta(name="description", content=site.description || '')
+    meta(name="keywords", content=site.keywords || '')
+    meta(name="author", content=site.author || '')
+
+    //- Mobile viewport optimized: h5bp.com/viewport
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    //- Favicon
+    link(rel="shortcut icon", href="images/favicon.ico")
+
+    //- Styles
+    != styles.toHTML()
+
+  body
+    .container-narrow
+        .col.col-lg-12
+            .header
+                ul.nav.nav-pills.pull-right
+                  each doc in getCollection('pages').toJSON()
+                    - page_class = (document.url === doc.url) ? 'active' : null
+                    li(class=page_class)
+                      a(href=doc.url)= doc.title
+                h3.text-muted Austin
+                    span(class="orange") Kettner
+
+            // Content
+            != content
+
+    // Scripts
+    != scripts.toHTML()
+
