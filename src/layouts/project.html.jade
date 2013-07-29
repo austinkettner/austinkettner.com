@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+article#project.project
+	.row
+		.col.col-lg-10.col-offset-1
+			h1= document.title
+			hr
+			#carousel-example-generic.carousel.slide
+				// Indicators
+				ol.carousel-indicators
+					li(data-target="#carousel-example-generic", data-slide-to="0", class="active")
+					li(data-target="#carousel-example-generic", data-slide-to="1")
+					li(data-target="#carousel-example-generic", data-slide-to="2")
+				// Wrapper for Slides
+				.carousel-inner
+					.item.active
+						img(src="1.png")
+					.item
+						img(src="2.png")
+					.item
+						img(src="3.png")
+				// Controls
+				a(class="left carousel-control", href="#carousel-example-generic", data-slide="prev")
+					span(class="icon-prev")
+				a(class="right carousel-control", href="#carousel-example-generic", data-slide="next")
+					span(class="icon-next")	
+			.post-content!= content
+	.row
+		.col.col-lg-8.col-offset-2
+			button(type="button", class="btn btn-primary btn-large btn-block") Check it out
