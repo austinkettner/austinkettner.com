@@ -1,8 +1,8 @@
 ---
-title: Quixby
+title: Quixby.com Business Site
 platform: Web
 identifier: quixby
-pageOrder: 4
+pageOrder: 6
 layout: project
 ---
 

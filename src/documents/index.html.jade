@@ -5,3 +5,9 @@ isPage: true
 pageOrder: 1
 ---
 
+section#work
+	.projects
+		each document in getCollection('projects').toJSON()
+			li
+				a(href= document.url, class="thumbnail")
+					img(src= '/' + document.relativeDirPath + '/thumbnail.png')
