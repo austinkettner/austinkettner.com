@@ -2,7 +2,7 @@
 title: Quixby
 platform: Web
 identifier: quixby
-pageOrder: 4
+pageOrder: 5
 layout: project
 ---
 
