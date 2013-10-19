@@ -1,8 +1,8 @@
 ---
-title: DI.FM
-platform: Windows 8
-identifier: di-fm
-pageOrder: 2
+title: The People Startup
+platform: web
+identifier: thepeoplestartup
+pageOrder: 1
 layout: project
 ---
 
