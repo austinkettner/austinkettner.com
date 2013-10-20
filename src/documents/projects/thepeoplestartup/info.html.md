@@ -2,6 +2,7 @@
 title: The People Startup
 platform: web
 identifier: thepeoplestartup
+link: http://www.thepeoplestartup.com
 pageOrder: 1
 layout: project
 ---

@@ -7,7 +7,7 @@ article#project.project
 		.col-sm-10.col-sm-offset-1
 			h1= document.title
 			hr
-			#carousel-example-generic.carousel.slide
+			.carousel.slide
 				// Indicators
 				ol.carousel-indicators
 					li(data-target="#carousel-example-generic", data-slide-to="0", class="active")
@@ -29,4 +29,6 @@ article#project.project
 			.post-content!= content
 	.row
 		.col-sm-8.col-sm-offset-2
-			button(type="button", class="btn btn-primary btn-large btn-block") Check it out
+			if document.link
+				form(action= document.link)
+					button(type="submit", class="btn btn-primary btn-large btn-block") Check it out

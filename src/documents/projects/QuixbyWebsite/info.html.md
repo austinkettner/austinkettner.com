@@ -2,6 +2,7 @@
 title: Quixby.com Business Site
 platform: Web
 identifier: quixby
+link: http://www.quixby.com
 pageOrder: 6
 layout: project
 ---

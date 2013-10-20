@@ -2,6 +2,7 @@
 title: Deal Flux
 identifier: deal-flux
 platform: Windows 8 & Windows Phone
+link: http://www.windowsphone.com/en-us/store/app/deal-flux/d8145bc1-6b17-4138-b876-29a036112feb
 pageOrder: 2
 layout: project
 ---
