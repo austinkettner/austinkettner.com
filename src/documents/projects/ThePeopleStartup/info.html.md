@@ -7,4 +7,4 @@ pageOrder: 1
 layout: project
 ---
 
-A Digitally Imported Radio App built for Windows 8 exclusively. The major motivation behind this project was to create a great app for listening to DI Radio on Windows 8 since no such app existed. While DI.FM provides a great experience via various apps on iOS, Android, and even Blackberry Windows Phone and Windows 8 were sorely lacking and in need of a great app themself.
+The People Startup (TPS) is really best classified as a 'Social Experiment'. Originally conceived by a business partner and friend of mine, James Hilton (@cr0wmium). The premise being that everyone joins TPS as a user, creating a large acquirable user base for a large company. Then, we would sell the startup to the company, and whatever the the acquisition price is, 70% of that capital would go back to all the users who joined.
