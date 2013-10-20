@@ -2,8 +2,9 @@
 title: Kat's Ribbon of Hope
 platform: web
 identifier: kroh
+link: http://katsribbonofhope.com/
 pageOrder: 5
 layout: project
 ---
 
-A Digitally Imported Radio App built for Windows 8 exclusively. The major motivation behind this project was to create a great app for listening to DI Radio on Windows 8 since no such app existed. While DI.FM provides a great experience via various apps on iOS, Android, and even Blackberry Windows Phone and Windows 8 were sorely lacking and in need of a great app themself.
+Kat's Ribbon of Hope is a non-profit founded to help raise money for breast cancer research. I was involved in converting a basic informational website into a fully checkout-ready site. I was responsible for redesigning the website, building it from scratch ontop of Shopify and configuration of all services in use (Shopify, Paypal, Stripe, more).

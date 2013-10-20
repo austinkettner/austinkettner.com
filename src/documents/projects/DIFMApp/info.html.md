@@ -2,6 +2,7 @@
 title: DI.FM
 platform: Windows 8
 identifier: di-fm
+link: http://apps.microsoft.com/windows/en-us/app/di-fm/bd637ea1-e7ac-4004-8f54-d2caeef79664
 pageOrder: 2
 layout: project
 ---
