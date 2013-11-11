@@ -1,10 +1,12 @@
 //Imports
-@import overwrites
 
 body, h1, h2, h3, h4, h5, p
 	font-family: 'museo-sans', sans-serif
 	color: #5d5d5d
 	font-weight: 100
+
+body
+	border-top: 3px solid orange
 
 p
 	line-height: 24px
@@ -26,10 +28,11 @@ img
 
 .nav > li > a
 	padding: 3px 20px 2px
+	font-size: 12px
 
 .nav-pills
 	li > a
-		border-radius: 2px
+		border-radius: 12px
 		color: #999
 	li.active > a
 		background-color: orange
@@ -93,9 +96,6 @@ img
 	text-align: center
 	img
 		width: 100%
-	.post-content
-		margin-top: 30px
-		text-align: justify
 
 // Post Styling
 .post
@@ -111,6 +111,10 @@ img
 		width: 100%
 		margin-top: 20px
 		margin-bottom: 20px
+		
+.post-content
+	margin-top: 30px
+	text-align: left
 
 article#post
 	text-align: center

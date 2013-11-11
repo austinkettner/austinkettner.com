@@ -40,9 +40,11 @@ html(lang="en")
   body
     .container-narrow
         .col-lg-12
-            .header
+            .header.clearfix
                 .logo
-                    img(src="/images/logo.png", href="http://www.austinkettner.com)
+                    h3 Austin
+                        span(class="orange") Kettner
+
                 ul.nav.nav-pills
                   each doc in getCollection('pages').toJSON()
                     - page_class = (document.url === doc.url) ? 'active' : null
