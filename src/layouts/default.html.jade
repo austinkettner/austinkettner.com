@@ -9,12 +9,15 @@
 -scripts.add(["//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"])
 
 //- Google Web Fonts
-- styles.add(["//use.typekit.net/ttg6nzr.js"])
+- scripts.add(["//use.typekit.net/ttg6nzr.js"])
+
+//- Animate.css
+- styles.add(["/vendor/animate.css"])
 
 //- User
 - styles.add(["/styles/style.css"])
 
-!!!
+doctype 6
 html(lang="en")
   head
 
@@ -38,7 +41,7 @@ html(lang="en")
     != styles.toHTML()
 
   body
-    .container-narrow
+    .container-narrow.animated.fadeIn
         .col-lg-12
             .header.clearfix
                 .logo
@@ -57,11 +60,11 @@ html(lang="en")
     // Scripts
 
     // Typekit
-    script(type="text/javascript")
+    script.
         try{Typekit.load();}catch(e){}
 
     // Google Analytics
-    script(type="text/javascript")
+    script.
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-38758664-1']);
         _gaq.push(['_setDomainName', 'austinkettner.com']);

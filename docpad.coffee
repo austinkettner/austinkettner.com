@@ -21,10 +21,6 @@ docpadConfig = {
     projects: ->
       @getCollection('html').findAllLive({relativeOutDirPath:/projects[\/\\]\w+/},{pageOrder:1})
 
-  # Custom Plugin Settings
-  plugins:
-    sass:
-      compass: true
 }
 
 # Export the Configuration
