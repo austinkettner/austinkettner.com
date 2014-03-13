@@ -9,7 +9,7 @@
 - scripts.add(["//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"])
 
 //- Google Web Fonts
-- styles.add(["http://fonts.googleapis.com/css?family=Open+Sans:300,400,600"])
+- styles.add(["http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700,900"])
 
 //- Animate.css
 - styles.add(["/vendor/animate.css"])
@@ -17,7 +17,7 @@
 //- User
 - styles.add(["/styles/style.css"])
 
-doctype 6
+doctype html
 html(lang="en")
   head
 
@@ -41,7 +41,7 @@ html(lang="en")
     != styles.toHTML()
 
   body
-    .container-narrow.animated.fadeIn
+    .container-narrow
         .col-lg-12
             .header.clearfix
                 .logo
@@ -77,4 +77,3 @@ html(lang="en")
         })();
     // JQuery, Bootstrap JS, others
     != scripts.toHTML()
-
