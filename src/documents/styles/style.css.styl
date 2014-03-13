@@ -1,19 +1,24 @@
 @import 'nib'
 
 body, h1, h2, h3, h4, h5, p
-	font-family 'Open Sans', sans-serif
+	font-family 'Alegreya', serif
 	color #5d5d5d
-	font-weight 300
+	font-weight 400
 
 body
 	border-top 3px solid orange
 
+// Headers
+h1, h2, h3
+	font-weight 700
+
+h4, h5
+	font-weight 400
+	color #999
+
 p
 	line-height 24px
 	text-align justify
-
-ul, ol, li
-	list-style none
 
 .container-narrow
 	margin 0 auto
@@ -22,13 +27,14 @@ ul, ol, li
 img
 	border-radius 3px
 
+// Navigation Styling
 .nav
 	margin-bottom 28px
 	li
 		a
-			padding 3px 18px 1px
-			font-size 12px
-			font-weight 600
+			padding 2px 18px 2px
+			font-size 13px
+			font-weight 700
 
 .nav-pills
 	li, li+li
@@ -91,6 +97,7 @@ img
 	li
 		width 100%
 		float left
+		list-style none
 
 .project
 	margin 40px 0 120px
@@ -99,7 +106,7 @@ img
 		width 100%
 
 .post
-	margin 40px 0
+	margin 20px 0
 	h1
 		color #aeaeae
 	.post-details
@@ -112,6 +119,7 @@ img
 .post, .date, .post, .author
 	display inline-block
 
+// Post Content Styling
 .post-content
 	margin-top 30px
 	text-align left
