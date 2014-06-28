@@ -26,6 +26,5 @@
     "docpad-plugin-stylus": "2.x",
     "docpad-plugin-jade": "2.x",
     "docpad-plugin-marked": "2.x",
-    "docpad-plugin-cleanurls": "^2.7.0"
   }
 }
