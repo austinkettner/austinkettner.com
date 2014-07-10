@@ -1,7 +1,7 @@
 ---
 title: Heroku SSL w/ custom certificate  
 date: 2013-11-10  
-image: http://d.pr/i/EhQe+
+image: http://cl.ly/image/1I202Y0n461r/Screen%20Shot%202014-07-10%20at%2012.35.06%20PM.png
 layout: post
 ---
 
@@ -21,7 +21,7 @@ It assumes your are in a Heroku-recognized working directory. If not, add `--app
 `$ rm server.pass.key`
 
 ### Step 4 - Generate CSR
-`$ openssl req -new -key server.key -out server.csr + answer questions`
+`$ openssl req -new -key server.key -out server.csr`
 
 ### Step 5 - Generate CRT
 `$ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt`
