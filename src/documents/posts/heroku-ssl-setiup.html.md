@@ -11,7 +11,7 @@ Below are the steps in a clean and concise format. These steps are for generatin
 
 It assumes your are in a Heroku-recognized working directory. If not, add `--app app-name' to the end of your commands.
 
-### Step 1 - Generate pass-key
+### Step 1 - Generate pass-key  
 `$ openssl genrsa -des3 -passout pass:x -out server.pass.key 2048`
 
 ### Step 2 - Generate a no-pass-key

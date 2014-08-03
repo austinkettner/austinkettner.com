@@ -6,7 +6,7 @@ pageOrder: 1
 ---
 
 section#work
-	.projects.clearfix
+	.project-grid
 		each document in getCollection('projects').toJSON()
 			li
 				a(href= document.url, class="thumbnail")
