@@ -8,3 +8,7 @@ layout: project
 ---
 
 Kat's Ribbon of Hope is a non-profit founded to help raise money for breast cancer research. I was involved in converting a basic informational website into a fully checkout-ready site. I was responsible for redesigning the website, building it from scratch ontop of Shopify and configuration of all services in use (Shopify, Paypal, Stripe, more).
+
+![About Page](./images/1.png)
+![Events Page](./images/2.png)
+![Contact Us Page](./images/3.png)

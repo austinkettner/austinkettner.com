@@ -4,15 +4,15 @@
 //- jQuery
 - scripts.add(["//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"])
 
-//- Bootstrap 3
-- styles.add(["//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css"])
-- scripts.add(["//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"])
-
 //- Google Web Fonts
 - styles.add(["http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700,900"])
 
-//- Animate.css
-- styles.add(["/vendor/animate.css"])
+//- Animate.css and Prettify CSS
+- styles.add(["/vendor/animate.css","/vendor/prism.css"])
+
+// Prettify JS
+- scripts.add(["/vendor/prism.js"])
+
 
 //- User
 - styles.add(["/styles/style.css"])
@@ -41,39 +41,31 @@ html(lang="en")
     != styles.toHTML()
 
   body
-    .container-narrow
+    header#header
+      .container
+        .logo
+            h3 Austin
+              span(class="orange") Kettner
 
-      .header.clearfix
-          .logo
-              h3 Austin
-                  span(class="orange") Kettner
-
-          ul.nav.nav-pills
+        nav
+          ul.nav
             each doc in getCollection('pages').toJSON()
               - page_class = (document.url === doc.url) ? 'active' : null
               li(class=page_class)
                 a(href=doc.url)= doc.title
 
-      // Content
+    section#content
       != content
 
-    // Scripts
-
-    // Typekit
-    script.
-        try{Typekit.load();}catch(e){}
-
     // Google Analytics
-    script.
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-38758664-1']);
-        _gaq.push(['_setDomainName', 'austinkettner.com']);
-        _gaq.push(['_trackPageview']);
+    script(type="text/javascript").
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+      ga('create', 'UA-38758664-1', 'auto');
+      ga('send', 'pageview');
+
     // JQuery, Bootstrap JS, others
     != scripts.toHTML()
