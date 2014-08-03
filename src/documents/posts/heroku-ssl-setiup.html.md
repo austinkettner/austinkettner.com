@@ -30,4 +30,4 @@ It assumes your are in a Heroku-recognized working directory. If not, add `--app
 `$ heroku addons:add ssl:endpoint`
 
 ### Step 7 - Upload Certificate to SSL Addon
-`$ heroku certs:add server.crt server.key --app glances-website-staging`
+`$ heroku certs:add server.crt server.key --app heroku-app-name`
