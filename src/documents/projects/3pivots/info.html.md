@@ -3,6 +3,7 @@ title: 3Pivots
 platform: Web
 identifier: 3pivots
 type: startup
+link: http://www.3pivots.com
 pageOrder: 4
 layout: project
 ---
