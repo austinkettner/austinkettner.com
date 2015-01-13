@@ -2,12 +2,66 @@
 title: Home
 layout: page
 isPage: true
+inMenu: false
 pageOrder: 1
 ---
 
+
+section#intro
+	.container
+		.content.homepage
+			.graphic
+				img(src="/images/polygon.png")
+			.text
+				h3 Continually Simplify
+				
+section#about
+	.container
+		.content.homepage
+			.graphic
+				img(src="/images/letter.png")
+			.text
+				h2 About Me
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				p Lostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			.links
+				a(href="http://www.facebook.com/austinkettner")
+					img(src="/images/facebook.png")
+				a(href="http://www.twitter.com/austinkettner")
+					img(src="/images/twitter.png")
+				a(href="http://www.linkedin.com/austinkettner")
+					img(src="/images/linkedin.png")
+				a(href="http://www.dribbble.com/austinkettner")
+					img(src="/images/dribbble.png")
+				a(href="http://plus.google.com/austinkettner")
+					img(src="/images/google-plus.png")
+
 section#work
-	.project-grid
-		each document in getCollection('projects').toJSON()
-			li
-				a(href= document.url, class="thumbnail")
-					img(src= '/' + document.relativeDirPath + '/thumbnail.png')
+	.container
+		.content.homepage
+			.graphic
+				img(src="/images/lightbulb.png")
+			.text
+				h2 Work
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+			.interactive-preview
+				a(href="/projects/glances/info.html")
+					img(src="/images/work-preview-glances.png")
+				a(href="/projects/quixby/info.html")
+					img(src="/images/work-preview-quixby.png")
+				a(href="/projects/3pivots/info.html")
+					img(src="/images/work-preview-3pivots.png")
+			.links
+				a(href="/work.html") See all of my work
+
+section#contact
+	.container
+		.content.homepage
+			.graphic
+				img(src="/images/mail.png")
+			.text
+				h2 Contact
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+			.links
+				form(action="mailto:hello@austinkettner.com")
+					button(class="standard blue", type="submit", value="Email Me") Email Me

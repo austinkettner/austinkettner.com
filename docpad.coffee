@@ -69,7 +69,7 @@ docpadConfig =
   # These are special collections that our website makes available to us
   collections:
     pages: ->
-      @getCollection('html').findAllLive({isPage:true},{pageOrder: $exists: true}, {pageOrder:1}).on "add", (model) ->
+      @getCollection('html').findAllLive({inMenu:true},{pageOrder: $exists: true},{pageOrder:1}).on "add", (model) ->
         model.setMetaDefaults({layout:"page"})
     posts: ->
       @getCollection('html').findAllLive({relativeOutDirPath:'posts'},{date:-1})

@@ -19,16 +19,16 @@
     "npm": "2.x"
   },
   "dependencies": {
-    "docpad": "6.x",
-    "docpad-plugin-coffeescript": "2.x",
-    "docpad-plugin-ghpages": "2.x",
-    "docpad-plugin-jade": "2.x",
-    "docpad-plugin-livereload": "2.x",
-    "docpad-plugin-marked": "2.x",
-    "docpad-plugin-stylus": "~2.7.0",
-    "jeet": "6.x",
-    "rupture": "^0.3.0",
-    "stylus": "0.x",
-    "axis": "0.x"
+    "axis": "*",
+    "docpad": "*",
+    "docpad-plugin-coffeescript": "*",
+    "docpad-plugin-ghpages": "*",
+    "docpad-plugin-jade": "^2.8.0",
+    "docpad-plugin-livereload": "*",
+    "docpad-plugin-marked": "*",
+    "docpad-plugin-stylus": "^2.8.0",
+    "jeet": "*",
+    "rupture": "^0.6.1",
+    "stylus": "*"
   }
 }

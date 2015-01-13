@@ -1,0 +1,48 @@
+---
+title: Work
+layout: page
+isPage: true
+inMenu: true
+pageOrder: 2
+---
+
+section#myStartups
+	.container
+		.content.intro
+			.text
+				h2 Startups of Mine
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+			.gallery
+				each document in getCollection('projects').toJSON()
+					if document.type === 'startup'
+						li
+							a(href= document.url, class="thumbnail")
+								img(src= '/' + document.relativeDirPath + '/thumbnail.png')
+
+section#otherWork
+	.container
+		.content
+			.text
+				h2 Development and Design Work
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+			.gallery
+				each document in getCollection('projects').toJSON()
+					if document.type === 'other'
+						li
+							a(href= document.url, class="thumbnail")
+								img(src= '/' + document.relativeDirPath + '/thumbnail.png')
+
+section#conceptProjects
+	.container
+		.content
+			.text
+				h2 Concept Projects
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.	
+			.gallery
+				each document in getCollection('projects').toJSON()
+					if document.type === 'concept'
+						li
+							a(href= document.url, class="thumbnail")
+								img(src= '/' + document.relativeDirPath + '/thumbnail.png')
+			.text
+				p.highlight Coming Soon

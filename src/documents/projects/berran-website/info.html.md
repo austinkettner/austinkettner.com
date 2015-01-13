@@ -2,6 +2,7 @@
 title: Berran.com
 platform: Web
 identifier: berran
+type: other
 pageOrder: 4
 layout: project
 ---
