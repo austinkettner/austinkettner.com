@@ -2,6 +2,7 @@
 title: Kat's Ribbon of Hope
 platform: web
 identifier: kroh
+type: other
 link: http://katsribbonofhope.com/
 pageOrder: 5
 layout: project

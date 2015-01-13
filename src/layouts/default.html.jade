@@ -5,62 +5,69 @@
 - scripts.add(["//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"])
 
 //- Google Web Fonts (Fira Sans)
-- styles.add(["http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic"])
+- styles.add(["http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic|Pacifico"])
 
-//- Animate.css and Prettify CSS
-- styles.add(["/vendor/animate.css","/vendor/prism.css"])
+//- Vendor CSS
+- styles.add(["/vendor/animate.css","/vendor/prism.css","http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css"])
 
-// Prettify JS
+//- Vendor JS
 - scripts.add(["/vendor/prism.js"])
 
-//- User
+//- User Styles
 - styles.add(["/styles/style.css"])
+
+//- User Scripts
+- scripts.add(["/scripts/script.js"])
 
 doctype html
 html(lang="en")
-  head
+	head
 
-    //- Meta
-    meta(http-equiv="content-type", content="text/html; charset=utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		//- Meta
+		meta(http-equiv="content-type", content="text/html; charset=utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
 
-    //- Site title and description
-    title= getPreparedTitle()
-    meta(name="description", content=site.description || '')
-    meta(name="keywords", content=site.keywords || '')
-    meta(name="author", content=site.author || '')
+		//- Site title and description
+		title= getPreparedTitle()
+		meta(name="description", content=site.description || '')
+		meta(name="keywords", content=site.keywords || '')
+		meta(name="author", content=site.author || '')
 
-    //- Mobile viewport optimized: h5bp.com/viewport
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		//- Mobile viewport optimized: h5bp.com/viewport
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
-    //- Favicon
-    link(rel="shortcut icon", href="/images/favicon.ico")
+		//- Favicon
+		link(rel="shortcut icon", href="/images/favicon.ico")
 
-    //- Styles
-    != styles.toHTML()
+		//- Styles
+		!= styles.toHTML()
 
-  body
-    header#header
-        .brand
-            h3 Austin L Kettner
-        nav
-          ul.nav
-            each doc in getCollection('pages').toJSON()
-              - page_class = (document.url === doc.url) ? 'active' : null
-              li(class=page_class)
-                a(href=doc.url)= doc.title
+	body
+		header#header
+			.brand
+				a(href="/")
+					.name
+						| Austin L Kettner
+					.profession
+						.cursive
+							| web developer
+			nav.main
+				ul.nav
+					each doc in getCollection('pages').toJSON()
+						- page_class = (document.url === doc.url) ? 'active' : null
+						li(class=page_class)
+							a(href=doc.url)= doc.title
 
-    section#content
-      != content
+		section#content
+			!= content
 
-    //- Google Analytics
-    script(type="text/javascript").
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		//- Google Analytics
+		script(type="text/javascript").
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-38758664-1', 'auto');
+			ga('send', 'pageview');
 
-      ga('create', 'UA-38758664-1', 'auto');
-      ga('send', 'pageview');
-
-    != scripts.toHTML()
+		!= scripts.toHTML()

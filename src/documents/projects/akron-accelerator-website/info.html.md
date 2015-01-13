@@ -3,6 +3,7 @@ title: Akron Global Business Accelerator
 platform: web
 role: design
 identifier: akronaccelerator
+type: other
 link: http://www.akronaccelerator.com
 pageOrder: 9
 layout: project
