@@ -8,10 +8,11 @@ pageOrder: 1
 layout: project
 ---
 
-With various One Deal a Day websites such as Woot, 1 Sale a Day, and Yugster it was evident that there
-needed to be a way to aggregate all of these sources into one central location. As a Windows Phone user
-the initial push was on Windows Phone 7, but this quickly expanded onto Windows 8 due to demand from users
-and Microsoft themself.
+Musketeer is a mobile emergency application designed to help communities better help each other. The Musketeer team reached out to 3Pivots to design and build their launch web presence. The goal was instill confidence in new potential users while also invoking a modern, clean, futuristic vibe.
+
+When balancing emotion vs futuristic styling it tends to get difficult to not sway too far in either direction. It's also a not always clear to the client or users that modern, clean and futuristic styling in most cases invoke vastly different emotions than security and peace of mind (outside of some specific industries). As such, we spent a great amount of time finding that balance and build each page with a unique flare.
+
+Overall I believe we nailed it, and I am especially proud of the 404 Page which I have to give a shout out to Alessandro Gyimah for drafting. Oh, the site is also fully responsive and built on Wordpress allowing nearly every single element to be edited by the client via some very simple controls!
 
 ![Preview View](./images/1.png)
 ![Homepage View](./images/2.png)
