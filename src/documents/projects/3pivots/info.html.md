@@ -4,7 +4,7 @@ platform: Web
 identifier: 3pivots
 type: startup
 link: http://www.3pivots.com
-pageOrder: 4
+pageOrder: 3
 layout: project
 ---
 

@@ -4,7 +4,7 @@ platform: web
 identifier: thepeoplestartup
 type: startup
 link: http://www.thepeoplestartup.com
-pageOrder: 3
+pageOrder: 2
 layout: project
 ---
 

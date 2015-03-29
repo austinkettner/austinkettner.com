@@ -3,14 +3,23 @@ layout: default
 ---
 
 section#projectDetails
-	.container-narrow
-		.content.intro
-			h1= document.title
+	.content.intro
+		.container-narrow
+			.title= document.title
 			hr
-			.preview
-				img(src="./preview.png")
-			.project-content!= content
-
-			if document.link
-				form(action= document.link)
-					button(type="submit", class="btn check-it-out") Check it out
+	.preview
+		.container-narrow
+			img(src="./preview.png")
+	.project-content
+		.container-narrow!= content
+	.project-gallery
+		.container-narrow
+			ul
+				for file in getDocument().getAssociatedFiles().toJSON()
+					li
+						img(src=file.url)
+		.link
+			.container-narrow
+				if document.link
+					form(action= document.link)
+						button(type="submit", class="btn check-it-out") Check it out

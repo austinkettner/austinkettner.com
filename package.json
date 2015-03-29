@@ -21,12 +21,13 @@
   "dependencies": {
     "axis": "*",
     "docpad": "*",
+    "docpad-plugin-associatedfiles": "~2.2.0",
     "docpad-plugin-coffeescript": "*",
     "docpad-plugin-ghpages": "*",
-    "docpad-plugin-jade": "^2.8.0",
+    "docpad-plugin-jade": "~2.8.0",
     "docpad-plugin-livereload": "*",
     "docpad-plugin-marked": "*",
-    "docpad-plugin-stylus": "^2.8.0",
+    "docpad-plugin-stylus": "~2.8.0",
     "jeet": "*",
     "rupture": "^0.6.1",
     "stylus": "*"
