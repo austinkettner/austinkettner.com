@@ -4,7 +4,7 @@ platform: Web
 identifier: quixby
 type: startup
 link: http://www.quixby.com
-pageOrder: 2
+pageOrder: 1
 layout: project
 ---
 

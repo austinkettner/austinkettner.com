@@ -10,6 +10,7 @@ base()
 
 // Colors, spawn!
 light-grey = #E1E1E1
+dark-grey = #666666
 grey = #eaeaea
 blue = #69A5EA
 orange = RGBA(230, 126, 34, 1)
@@ -81,7 +82,7 @@ p
 	font-weight 300
 	text-align justify
 	line-height 2
-	color #999
+	color #777
 	&.highlight
 		font-style italic
 		color orange
@@ -97,10 +98,11 @@ img
 	z-index 0
 
 hr
-	color rgba(209, 209, 209, 0.3)
-	height 1px
-	margin-top 40px
+	background rgba(50, 50, 50, 0.5)
+	height 2px
+	margin-top 25px
 	margin-bottom 40px
+	border none
 
 code
 	white-space normal
@@ -267,6 +269,15 @@ section
 		display none
 
 #projectDetails
+	margin-bottom 20vh
+	.title
+		font-family 'Fira Sans', sans-serif
+		font-weight 200
+		color #5d5d5d
+		font-size 64
+	.preview
+		img
+			width 100%
 	.project-content
 		padding-left 5%
 		padding-right 5%
@@ -277,6 +288,23 @@ section
 			margin-bottom 24px
 		p
 			margin-bottom 4vh
+	.project-gallery
+		cf()
+		margin-top 30px
+		ul
+			margin 0
+			padding 0
+			li
+				column(1/2, cycle: 2)
+				overflow hidden
+				margin-bottom 2.0%
+				img
+					width 100%
+					height auto
+					border 2px solid #D5D5D5
+					box-sizing border-box
+	.link
+		text-align center
 
 
 #postDetails
