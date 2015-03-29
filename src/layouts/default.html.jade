@@ -44,19 +44,20 @@ html(lang="en")
 
 	body
 		header#header
-			.brand
-				a(href="/")
-					.name
-						| Austin L Kettner
-					.profession
-						.cursive
-							| product manager
-			nav.main
-				ul.nav
-					each doc in getCollection('pages').toJSON()
-						- page_class = (document.url === doc.url) ? 'active' : null
-						li(class=page_class)
-							a(href=doc.url)= doc.title
+			.container
+				.brand
+					a(href="/")
+						.name
+							| Austin L Kettner
+						.profession
+							.cursive
+								| product manager
+				nav.main
+					ul.nav
+						each doc in getCollection('pages').toJSON()
+							- page_class = (document.url === doc.url) ? 'active' : null
+							li(class=page_class)
+								a(href=doc.url)= doc.title
 
 		section#content
 			!= content
