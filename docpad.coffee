@@ -74,7 +74,7 @@ docpadConfig =
     posts: ->
       @getCollection('html').findAllLive({relativeOutDirPath:'posts'},{date:-1})
     projects: ->
-      @getCollection('html').findAllLive({relativeOutDirPath:/projects[\/\\]\w+/},{pageOrder:1})
+      @getCollection('html').findAllLive({active:true, relativeOutDirPath:/projects[\/\\]\w+/},{pageOrder:1})
 
 
   # DocPad Events
@@ -113,7 +113,7 @@ docpadConfig =
     stylus:
       stylusLibraries:
         nib: false
-        'axis-css': true
+        'axis': true
         jeet: true
         rupture: true
       stylusOptions:

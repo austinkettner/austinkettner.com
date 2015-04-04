@@ -6,26 +6,24 @@ inMenu: true
 pageOrder: 3
 ---
 
-section#blog
+section#blog.full.first
+	.slant-bg
 	.container
-		.content.intro
+		.content
 			.text
 				h2 My latest Blog Posts
 				p Personal updates, opinions and ventures 
-
-section#blogPosts
-	.container
-		each doc in getCollection('posts').toJSON()
-			- var arrDate = doc.date.toDateString().split(' ')
-			article.post
-				a(href= doc.url)
-					h3= doc.title
-				.post-details
-					.date
-						span.month-day= arrDate[1] + ' ' + arrDate[2] + ' '
-						span.year= arrDate[3]
-					.author
-						span.name= '-' + ' ' + site.author
-				p= doc.content.slice(0,350) + '...' + ' '
-					a(href= doc.url) Read More →
-			hr
+			.blogList
+				each doc in getCollection('posts').toJSON()
+					- var arrDate = doc.date.toDateString().split(' ')
+					li.post
+						a(href= doc.url)
+							h3= doc.title
+						.post-details
+							.date
+								span.month-day= arrDate[1] + ' ' + arrDate[2] + ' '
+								span.year= arrDate[3]
+							.author
+								span.name= '-' + ' ' + site.author
+						p= doc.content.slice(0,350) + '...' + ' '
+							a(href= doc.url) Read More →

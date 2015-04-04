@@ -5,6 +5,7 @@ identifier: berran
 type: other
 pageOrder: 4
 layout: project
+active: false
 ---
 
 A website development job aimed at completely reinventing Berran's online image while also building

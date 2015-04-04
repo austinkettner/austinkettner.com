@@ -8,13 +8,13 @@
 - styles.add(["http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic|Pacifico"])
 
 //- Vendor CSS
-- styles.add(["/vendor/animate.css","/vendor/prism.css"])
+- styles.add(["/vendor/animate.css"])
 
 //- Vendor JS
-- scripts.add(["/vendor/prism.js","/vendor/wow.min.js"])
+- scripts.add(["/vendor/wow.min.js","//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"])
 
 //- User Styles
-- styles.add(["/styles/style.css"])
+- styles.add(["/styles/style.css","http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"])
 
 //- User Scripts
 - scripts.add(["/scripts/script.js"])
@@ -61,6 +61,15 @@ html(lang="en")
 
 		section#content
 			!= content
+		
+		footer
+			.container
+				.copyright
+					| Copyright © 2015 Austin Kettner
+				.links
+					a(href="https://dribbble.com/austinkettner") Dribbble
+					a(href="http://www.github.com/austinkettner") Github
+
 
 		//- Google Analytics
 		script(type="text/javascript").
