@@ -11,3 +11,5 @@ Shopify is a great platform, very flexible and very easy to get into for develop
 - [Shopify's Core Documentation Site for Theme Developers, Liquid Docs](https://docs.shopify.com/themes)
 - [Absolute necessity for theme developers, Desktop Theme Editor](https://apps.shopify.com/desktop-theme-editor)
 - [Tetchi's Shopify Theme from Scratch Guide](http://www.tetchi.ca/shopify-theme-from-scratch/#toc)
+
+Looking to setup your own shop? [Set one up now](http://www.shopify.com/?ref=austinkettner)

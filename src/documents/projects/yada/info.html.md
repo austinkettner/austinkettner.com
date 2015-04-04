@@ -3,7 +3,6 @@ title: Yada App
 platform: app
 identifier: yada
 type: startup
-link: http://www.yada.exchange
 pageOrder: 3
 layout: project
 associatedFilesPath: 'yada'
