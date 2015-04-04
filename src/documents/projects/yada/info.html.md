@@ -4,9 +4,10 @@ platform: app
 identifier: yada
 type: startup
 link: http://www.yada.exchange
-pageOrder: 4
+pageOrder: 3
 layout: project
 associatedFilesPath: 'yada'
+active: true
 ---
 
 Yada is the latest endeavor of mine, and it best described by the snipper on our site.
@@ -16,11 +17,3 @@ Yada is the latest endeavor of mine, and it best described by the snipper on our
 Whether it is piano lessons, an old book, or a red dress that you want to enjoy for only an evening, Yada is the place to share things with anyone, or only the people you want to see it. The important part is that Yada is extremely simple to use, built entirely around your mobile device, and isn’t time consuming."
 
 As sole designer and developer so far, Yada's design, animations and general flow are all driven around the philosophy of driving peace of mind. See the screens below for a better feel of what Yada is all about.
-
-## The Calming Landing Page (Preview)
-### Checkout the site live here <a href="http://www.yada.exchange">Yada.Exchange</a>
-![Yada Website](./images/1.png)
-![Yada Website](./images/2.png)
-![Yada Website](./images/3.png)
-
-## Gallery of App (Work in Progress)

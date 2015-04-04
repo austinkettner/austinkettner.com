@@ -3,23 +3,25 @@ layout: default
 ---
 
 section#projectDetails
-	.content.intro
-		.container-narrow
+	.slant-bg
+	.container-narrow
+		.content
 			.title= document.title
-			hr
-	.preview
-		.container-narrow
-			img(src="./preview.png")
-	.project-content
-		.container-narrow!= content
-	.project-gallery
-		.container-narrow
-			ul
-				for file in getDocument().getAssociatedFiles().toJSON()
-					li
-						img(src=file.url)
-		.link
-			.container-narrow
-				if document.link
-					form(action= document.link)
-						button(type="submit", class="btn check-it-out") Check it out
+			.project-content
+				!= content
+			.project-gallery
+				if document.platform == 'web'
+					ul.single-column
+						for file in getDocument().getAssociatedFiles().toJSON()
+							li
+								img(src=file.url)
+				if document.platform == 'app'
+					ul.two-column
+						for file in getDocument().getAssociatedFiles().toJSON()
+							li
+								img(src=file.url)
+			if document.link != null
+				.link
+					.container-narrow
+						form(action= document.link)
+							button(type="submit", class="btn check-it-out") Check it out

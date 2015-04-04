@@ -6,17 +6,14 @@ layout: default
 
 section#postDetails
 	.container-narrow
-		.content.top
+		.content
 			article#post.post
-				h1= document.title
-				hr
 				.post-image
 					img(src= document.image, alt="Header Image")
+				h1= document.title
 				
 				.post-content!= content
-				
 				hr
-					
 				.post-meta
 					span.date= arrDate[1] + ' ' + arrDate[2] + ' ' + arrDate[3] + ' '
 					span.author= 'By' + ' ' + site.author

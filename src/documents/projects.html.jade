@@ -1,0 +1,24 @@
+---
+title: Projects
+layout: page
+isPage: true
+inMenu: true
+pageOrder: 2
+---
+
+section#myProjects.full.first
+	.slant-bg
+	.container
+		.content
+			.text
+				h2 My Projects
+				p Startups are my most devoted work items. As most entrepreneurs will attest, there is no experience quite like entrepreneurism. In Ohio it’s most definitely challenging but it has been rewarding.
+			.gallery
+				each document in getCollection('projects').toJSON()
+					li
+						a(href= document.url, class="thumbnail")
+							.overlay
+							.project-title
+								= document.title
+							.image
+								img(src= '/' + document.relativeDirPath + '/preview.png')
