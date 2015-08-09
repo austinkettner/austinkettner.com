@@ -2,8 +2,10 @@
 title: HackerNews Reader
 platform: Windows 8
 identifier: hackernews-reader
+type: other
 pageOrder: 3
 layout: project
+active: false
 ---
 
 HackerNews Reader was an awesome project/product that was executed on very shortly after the Windows 8 release.

@@ -2,26 +2,28 @@
 title: Blog
 layout: page
 isPage: true
-pageOrder: 2
+inMenu: true
+pageOrder: 3
 ---
 
-section#blog
-  article
-      h2 Latest Blog Posts
-      h4 All of my blog posts covering my updates, opinions and ventures
-      hr
-
-  each doc in getCollection('posts').toJSON()
-      - var arrDate = doc.date.toDateString().split(' ')
-      .post
-          h3
-              a(href= doc.url)= doc.title
-          .post-details
-              .date
-                  span.month-day= arrDate[1] + ' ' + arrDate[2] + ' '
-                  span.year= arrDate[3]
-              .author
-                  span.name= '-' + ' ' + site.author
-          p= doc.content.slice(0,350) + ' '
-              a(href= doc.url) Read More
-      hr
+section#blog.full.first
+	.slant-bg
+	.container
+		.content
+			.text
+				h2 My latest Blog Posts
+				p Personal updates, opinions and ventures 
+			.blogList
+				each doc in getCollection('posts').toJSON()
+					- var arrDate = doc.date.toDateString().split(' ')
+					li.post
+						a(href= doc.url)
+							h3= doc.title
+						.post-details
+							.date
+								span.month-day= arrDate[1] + ' ' + arrDate[2] + ' '
+								span.year= arrDate[3]
+							.author
+								span.name= '-' + ' ' + site.author
+						p= doc.content.slice(0,350) + '...' + ' '
+							a(href= doc.url) Read More →

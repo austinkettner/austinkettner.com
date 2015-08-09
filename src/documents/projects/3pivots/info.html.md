@@ -1,0 +1,13 @@
+---
+title: 3Pivots
+platform: web
+identifier: 3pivots
+type: startup
+link: http://www.3pivots.com
+pageOrder: 3
+layout: project
+associatedFilesPath: '3pivots'
+active: true
+---
+
+3Pivots is a boutique consultancy founded by myself, Jack Hilton and James Hilton. It was originally a spinoff from Quixby and has been involved in many projects; some of which are listed in my 'Development and Design' section on my Work page.
