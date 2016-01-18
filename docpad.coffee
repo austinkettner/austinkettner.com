@@ -18,7 +18,7 @@ docpadConfig =
       ]
 
       # The default title of our website
-      title: "Austin L. Kettner"
+      title: "Austin L Kettner"
 
       # The website description (for SEO)
       description: """
@@ -37,7 +37,7 @@ docpadConfig =
       email: "hello@austinkettner.com"
 
       # Your company's name
-      copyright: "© 2014 Austin Kettner"
+      copyright: "Copyright © 2016 Austin Kettner"
 
 
     # Helper Functions
