@@ -15,7 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Austin Kettner's Personal Website
 email: hello@austinkettner.com
-description: > My personal website covering the critical bits and bytes of my life.
+description:
+  My personal website covering the critical bits and bytes of my life.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.austinkettner.com" # the base hostname & protocol for your site
 twitter_username: austinkettner
@@ -24,3 +25,7 @@ github_username:  austinkettner
 # Build settings
 markdown: kramdown
 theme: minima
+gems: [jekyll-watch, jekyll-assets, jekyll-sitemap, jekyll-seo-tag]
+sass:
+  sass_dir: _sass
+  style: compressed
