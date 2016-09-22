@@ -1,6 +1,65 @@
 body
-  background-color: #999999
+  background-color: #f5f5f5
   font-family: $base-font-family
   font-size: $base-font-size
   font-weight: $base-font-weight
   line-height: $base-line-height
+
+h1
+  font-size: 2rem
+  font-weight: 200
+
+h2
+  font-size: 1.5rem
+  font-weight: 800
+
+h3
+  font-size: 1.25rem
+  font-weight: 400
+
+h4
+  font-size: 1.1rem
+  font-weight: 400
+
+
+ul
+  list-style: none
+  padding: 0
+  li
+    list-style: none
+    padding: 0.25rem 0
+
+a
+  font-weight: 800
+  color: $dark-grey
+
+
+.container
+  max-width: 1200px
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  align-content: center
+  height: 100vh
+  flex-direction: row
+  flex-wrap: wrap
+
+.title
+  flex-basis: 100%
+
+.tagline
+  flex-basis: 100%
+
+.current-work
+  flex-basis: 100%
+  margin-top: 80px
+  .title
+    color: $orange
+
+.previous-work
+  flex-basis: 100%
+  margin-top: 50px
+  .title
+    color: $purple
