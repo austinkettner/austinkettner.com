@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "Austin Kettner: Founder, Designer, Developer, Minimalist"
+title: "Austin Kettner: Entrepreneur, Designer, Startup Advisor"
 email: hello@austinkettner.com
 description:
   My personal website covering the critical bits and bytes of my life.
