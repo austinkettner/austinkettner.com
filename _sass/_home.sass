@@ -1,0 +1,82 @@
+// Outer Div
+.home
+  height: 100vh
+  overflow: hidden
+  .container
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    align-content: center
+    height: 100vh
+    flex-direction: row
+    flex-wrap: wrap
+
+// Introduction Title and Tagline
+.title
+  flex-basis: 100%
+
+.tagline
+  flex-basis: 100%
+  margin-top: 20px
+
+.content
+  z-index: 100
+
+// Core Content
+// Work
+.work
+  display: flex
+  flex-wrap: nowrap
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-start
+  x-index: 1000
+  .current-work
+    flex-basis: 100%
+    margin-top: 80px
+    .title
+      h4
+        color: $orange
+
+  .previous-work
+    flex-basis: 100%
+    margin-top: 50px
+    .title
+      h4
+        color: $red
+
+.links
+  margin-top: 50px
+  position: absolute
+  bottom: 20px
+  width: 50%
+  ul
+    li
+      display: inline-block
+      list-style: circle
+      padding-left: 16px
+      &:first-child
+        padding: 0
+      a
+        font-weight: 300
+
+// Headshot
+.photo
+  position: absolute
+  bottom: -10px
+  right: 10vw
+  width: 40vw
+  max-width: 600px
+  z-index: 1
+  img
+    width: 100%
+    box-shadow: 0 0 8px 8px $background-color inset
+
+@media (max-width:37.5em)
+  .photo
+    position: absolute
+    width: 100vw
+    text-align: center
+    z-index: 1
+    img
+      text-align: center
