@@ -73,10 +73,24 @@
     box-shadow: 0 0 8px 8px $background-color inset
 
 @media (max-width:37.5em)
+  .home
+    height: auto
+    .container
+      height: auto
+  .title
+    margin-top: 30px
   .photo
+    display: none
     position: absolute
-    width: 100vw
+    width: 100%
     text-align: center
     z-index: 1
     img
       text-align: center
+      width: 100%
+  .links
+    position: relative
+    margin-top: 100px
+    width: 100%
+    li
+      display: inline-block
