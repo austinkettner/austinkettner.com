@@ -1,0 +1,32 @@
+.portfolio
+  .title
+    margin-top: 30vh
+
+.portfolio-items
+  width: 100%
+  margin-top: 80px
+  margin-bottom: 50px
+  .item
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    margin-top: 50px
+  .item-title
+    flex-basis: 20%
+  .item-previews
+    flex-basis: 70%
+    margin-top: 8px
+  .preview
+    padding-top: 10px
+    &:first-child
+      padding: 0
+
+@media (max-width:37.5em)
+  .portfolio
+    .portfolio-items
+      .item-title
+        flex-basis: 40%
+      .item-previews
+        flex-basis: 40%

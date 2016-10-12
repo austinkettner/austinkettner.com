@@ -1,1 +1,0 @@
-Copyright [Austin L Kettner](http://austinkettner.com). All rights reserved.
