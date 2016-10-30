@@ -5,12 +5,14 @@ layout: default
 <div class="home">
 
   <div class="container">
-    <div class="title">
-      <h1>Austin Kettner</h1>
-    </div>
-    <div class="tagline">
-      <h2>endlessly pursuing simplicity in products and design</h2>
-    </div>
+    <section class="intro">
+      <div class="title">
+        <h1>Austin Kettner</h1>
+      </div>
+      <div class="tagline">
+        <h2>endlessly pursuing simplicity in products and design</h2>
+      </div>
+    </section>
     <section class="content">
       <section class="work">
         <div class="current-work">
@@ -46,25 +48,12 @@ layout: default
           </ul>
         </div>
       </section>
-      <section class="links">
-        <ul class="horizontal links">
-          <li>
-            <a href="./portfolio" target="">Portfolio</a>
-          </li>
-          <li>
-            <a href="https://dribbble.com/austinkettner" target="_blank">Dribbble</a>
-          </li>
-          <li>
-            <a href="https://medium.com/@austinkettner" target="_blank">Medium</a>
-          </li>
-          <li>
-            <a href="https://github.com/austinkettner" target="_blank">Github</a>
-          </li>
-        </section>
     </section>
-    <div class="photo">
-      <img src="/assets/headshot.jpg">
-    </div>
+    {% include links.html %}
+  </div>
+
+  <div class="photo">
+    <img src="/assets/headshot.jpg">
   </div>
 
 </div>
