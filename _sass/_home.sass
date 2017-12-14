@@ -2,19 +2,12 @@
 .home
   height: 100vh
   overflow: hidden
-  //
-    .container
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    align-content: center
-    height: 100vh
-    flex-direction: row
-    flex-wrap: wrap
+  border-left: 5px solid $orange
 
 // Introduction Title and Tagline
 .title
   flex-basis: 100%
+  margin-bottom: 10px
 
 .tagline
   flex-basis: 100%
@@ -39,13 +32,6 @@
       h4
         color: $yellow
 
-  .previous-work
-    flex-basis: 100%
-    margin-top: 50px
-    .title
-      h4
-        color: $blue
-
 .links
   margin-top: 75px
   margin-bottom: 50px
@@ -59,23 +45,9 @@
       a
         font-weight: 300
 
-// Headshot
-.photo
-  position: absolute
-  bottom: 0
-  right: 10vw
-  width: 40vw
-  max-width: 600px
-  z-index: 1
-  img
-    width: 100%
-    box-shadow: 0 0 8px 8px $background-color inset
-
 @media (max-width:37.5em)
   .home
-    height: auto
-    .container
-      height: auto
+    height: 100vh
   .title
     margin-top: 30px
   .photo
@@ -96,10 +68,8 @@
 
 @media (max-width:72em)
   .home
-    height: auto
+    height: 100vh
     overflow: auto
-    .container
-      height: auto
   .links
     position: relative
     margin-top: 100px
