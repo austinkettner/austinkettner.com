@@ -10,12 +10,12 @@ h1, h2, h3, h4, h5
 
 h1
   font-size: 2rem
+  color: $grey-color-light
 
 h2
   font-size: 2.65rem
   font-family: 	"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
   font-weight: 700
-  color: $dark-grey
 
 h3
   font-size: 2.00rem
@@ -39,14 +39,18 @@ ul
 
 a
   font-weight: 700
-  color: $dark-grey
+  color: $grey-color
   text-decoration: none
   transition: all 1.15s
+  &:hover
+    color: $light-grey
+    transition: all 1.15s
+
 
 // Link Hover Effect
 .links
   a:hover
-    color: $grey-color
+    color: $grey-color-light
     transition: all 1.15s
 
 // Container
